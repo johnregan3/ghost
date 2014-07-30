@@ -1,0 +1,69 @@
+/* ===========================================
+Base Styles
+
+Includes General Styles as well as Style for
+mobile resolutions
+=========================================== */
+
+* {
+	/* !important used to override Boostrap border-radii */
+	@include border-radius(0 !important);
+	@include box-sizing(border-box);
+}
+
+body {
+	webkit-font-smoothing: antialiased;
+	font-family: $primary-font;
+	font-size: 16px;
+	line-height: 1.5em;
+	color: $text-color;
+
+	/* Headings */
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: $secondary-font;
+		font-weight: bold;
+		line-height: 1em;
+		margin-bottom: .5em;
+	}
+
+	p {
+		margin-bottom: .5em;
+	}
+
+	/* Boostrap Resets */
+
+	h1, .h1, h2, .h2, h3, .h3 {
+		margin-top: 0;
+	}
+
+	.navbar-default {
+		background: transparent;
+		border: 0;
+
+		.container-fluid {
+
+			.dropdown-menu {
+				font-size: 1em;
+				@include box-shadow(none);
+				padding-bottom: 0;
+			}
+		}
+	}
+
+	/* Structure */
+	#header .inner, .container-fluid, #content, #footer .inner {
+		max-width: 960px;
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	#primary, #secondary {
+		margin-bottom: 1.5em;
+	}
+
+	#footer {
+		padding: 1em 0;
+	}
+
+} /* body */

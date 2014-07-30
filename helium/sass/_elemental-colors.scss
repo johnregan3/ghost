@@ -1,0 +1,59 @@
+/* ===========================================
+Color Styles for Elemental
+=========================================== */
+
+.red {
+
+	a,
+	.bx-wrapper .bx-viewport #rotator .slide .caption a:hover,
+	.navbar-default .container-fluid .navbar-nav li  a:hover,
+	.navbar-default .container-fluid .navbar-nav li .dropdown-menu li a:hover,
+	&.home-template #content #primary .entry-header .entry-title a:hover,
+	#primary .entry .entry-header .entry-meta a.entry-date:hover,
+	.home-template #content #primary .entry-title a:hover {
+		color: $red;
+	}
+	a:hover,
+	#content #primary .entry .entry-header .entry-meta .entry-date:hover {
+		color: tint($red, 40%);
+	}
+
+} /* End Red */
+
+
+.green {
+
+	a,
+	.bx-wrapper .bx-viewport #rotator .slide .caption a:hover,
+	.navbar-default .container-fluid .navbar-nav li  a:hover,
+	.navbar-default .container-fluid .navbar-nav li .dropdown-menu li a:hover,
+	&.home-template #content #primary .entry-header .entry-title a:hover,
+	#primary .entry .entry-header .entry-meta a.entry-date:hover,
+	.home-template #content #primary .entry-title a:hover {
+		color: $green;
+	}
+	a:hover,
+	#content #primary .entry .entry-header .entry-meta .entry-date:hover {
+		color: tint($green, 40%);
+	}
+
+} /* End Green */
+
+
+.orange {
+
+	a,
+	.bx-wrapper .bx-viewport #rotator .slide .caption a:hover,
+	.navbar-default .container-fluid .navbar-nav li  a:hover,
+	.navbar-default .container-fluid .navbar-nav li .dropdown-menu li a:hover,
+	&.home-template #content #primary .entry-header .entry-title a:hover,
+	#primary .entry .entry-header .entry-meta a.entry-date:hover,
+	.home-template #content #primary .entry-title a:hover {
+		color: $orange;
+	}
+	a:hover,
+	#content #primary .entry .entry-header .entry-meta .entry-date:hover {
+		color: tint($orange, 40%);
+	}
+
+} /* End Orange */

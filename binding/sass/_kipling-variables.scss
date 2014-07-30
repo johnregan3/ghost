@@ -1,0 +1,20 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway);
+@import url(http://fonts.googleapis.com/css?family=Lora);
+
+$primary-font: 'Raleway', Times, 'Times New Roman', serif;
+$secondary-font: 'Montserrat', Arial, Helvetica, sans-serif;
+
+$background: url( '../assets/img/halftone.png' );
+
+$gold         : #ae956b;
+$primary-color: $gold;
+
+$text-color  : #333;
+$text-color-inverse: #ddd;
+$default-text-shadow-color: #fff;
+$default-text-shadow-v-offset: 1px;
+$default-text-shadow-h-offset: 1px;
+
+
+$border-color: #555;
+$primary-bg-color: #111;

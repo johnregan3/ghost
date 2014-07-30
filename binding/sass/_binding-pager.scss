@@ -1,0 +1,60 @@
+$shade : shade( $primary-color, 25% );
+.menu-panel {
+	background: $primary-bg-color;
+}
+
+.menu-toc {
+
+	li {
+		a {
+			background: tint( $primary-bg-color, 5% );
+			border-bottom: 1px solid $text-color;
+
+			&:hover, &.menu-toc-current a {
+				background: $primary-color;
+				@include background-image(linear-gradient(left, $shade, $primary-color));
+				color: $text-color;
+			}
+		}
+
+		&.menu-toc-current a {
+			background: $primary-color;
+			@include background-image(linear-gradient(left, $shade, $primary-color));
+			color: $text-color;
+		}
+	}
+}
+
+.bb-custom-wrapper nav span, .menu-button {
+	background: $primary-bg-color;
+}
+
+.content {
+	padding-bottom: 5em;
+	@include single-text-shadow;
+}
+
+.js .bb-item, .bb-bookblock, .bb-content {
+	background: $background;
+}
+
+.jspVerticalBar .jspCap {
+	height: 0;
+}
+
+.jspTrack {
+	background: transparent;
+	box-shadow: none;
+}
+
+.jspDrag {
+	background: $text-color;
+	border-radius: 0;
+}
+
+.bb-custom-wrapper nav span:hover,
+.menu-button:hover {
+	color: $primary-color;
+	@include single-transition(color, 0.3s, linear);
+}
+

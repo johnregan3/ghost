@@ -1,0 +1,25 @@
+/* ===========================================
+Base Navigation Styles for Elemental
+=========================================== */
+
+@media only screen and (min-width: 769px) {
+	.navbar-default {
+
+		.navbar-collapse {
+			padding: 0;
+		}
+
+		.navbar-nav li {
+
+			a {
+				border-right: 1px solid $border-color;
+			}
+
+			.dropdown-menu {
+				a {
+					border-right: none;
+				}
+			}
+		}
+	}
+}

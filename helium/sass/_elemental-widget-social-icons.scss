@@ -1,0 +1,16 @@
+/* ===========================================
+Social Icons Widget Styles for Elemental
+=========================================== */
+
+.widget.social-icons {
+	overflow: hidden;
+
+	.social-icon {
+		float: left;
+		margin-right: 1em;
+
+		:hover {
+			@include single-transition(color, 0.3s, linear);
+		}
+	}
+}

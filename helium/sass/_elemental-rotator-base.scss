@@ -1,0 +1,74 @@
+/* ===========================================
+Base Rotator Styles for Elemental
+=========================================== */
+
+/* Bx Slider */
+@import url( '../css/bxslider.css');
+
+.bx-wrapper {
+
+	.bx-viewport {
+		@include box-shadow(none);
+		border: none;
+		background: transparent;
+		left: 0;
+
+		#rotator {
+			width: 100%;
+			position: relative;
+
+			.slide {
+				position: relative;
+				left: 0;
+
+				.caption {
+					width: 100%;
+					position: static;
+					left: 0px;
+					bottom: 0;
+					line-height: 1.5em;
+					text-align: center;
+
+					$transp-bg-red   : red( $primary-bg-color );
+					$transp-bg-blue  : blue( $primary-bg-color );
+					$transp-bg-green : green( $primary-bg-color );
+
+					background: rgba( $transp-bg-red, $transp-bg-blue, $transp-bg-green, 0.9 );
+
+					a {
+						color: $text-color;
+
+						&:hover {
+							color: $primary-color;
+						}
+					}
+
+					p {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.bx-pager {
+		bottom: -3em;
+
+		&.bx-default-pager {
+			a {
+				background: $footer-text;
+				@include single-transition(background, 0.3s, linear);
+				@include border-radius(50%, !important);
+
+				&:hover, &.active {
+					background: $text-color;
+				}
+			}
+		}
+
+		.bx-controls-auto {
+			bottom: -3em;
+		}
+
+	}
+}

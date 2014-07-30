@@ -1,0 +1,22 @@
+/* ===========================================
+Desktop Styles
+
+Includes Style for Desktop resolutions
+=========================================== */
+
+@media only screen and (min-width: 769px) {
+
+	body {
+		/* Grid styles only apply at desktop resolution */
+		@import 'grid';
+
+		.navbar-default {
+			.container-fluid {
+				padding: 0;
+			}
+		}
+
+
+	} /* body */
+
+} /* Media Query */

@@ -1,0 +1,514 @@
+@import url("../assets/css/jquery.jscrollpane.custom.css");
+@import url("../assets/css/bookblock.css");
+@import url("../assets/css/custom.css");
+@import url("../assets/css/icons.css");
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway);
+@import url(http://fonts.googleapis.com/css?family=Lora);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* Icon Font */
+.menu-panel {
+  background: #111111;
+}
+
+.menu-toc li a {
+  background: #1c1c1c;
+  border-bottom: 1px solid #333333;
+}
+.menu-toc li a:hover, .menu-toc li a.menu-toc-current a {
+  background: #ae956b;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #826f50), color-stop(100%, #ae956b));
+  background-image: -webkit-linear-gradient(left, #826f50, #ae956b);
+  background-image: -moz-linear-gradient(left, #826f50, #ae956b);
+  background-image: -o-linear-gradient(left, #826f50, #ae956b);
+  background-image: linear-gradient(left, #826f50, #ae956b);
+  color: #333333;
+}
+.menu-toc li.menu-toc-current a {
+  background: #ae956b;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #826f50), color-stop(100%, #ae956b));
+  background-image: -webkit-linear-gradient(left, #826f50, #ae956b);
+  background-image: -moz-linear-gradient(left, #826f50, #ae956b);
+  background-image: -o-linear-gradient(left, #826f50, #ae956b);
+  background-image: linear-gradient(left, #826f50, #ae956b);
+  color: #333333;
+}
+
+.bb-custom-wrapper nav span, .menu-button {
+  background: #111111;
+}
+
+.content {
+  padding-bottom: 5em;
+  text-shadow: 1px 1px 1px white;
+}
+
+.js .bb-item, .bb-bookblock, .bb-content {
+  background: url("../assets/img/halftone.png");
+}
+
+.jspVerticalBar .jspCap {
+  height: 0;
+}
+
+.jspTrack {
+  background: transparent;
+  box-shadow: none;
+}
+
+.jspDrag {
+  background: #333333;
+  border-radius: 0;
+}
+
+.bb-custom-wrapper nav span:hover,
+.menu-button:hover {
+  color: #ae956b;
+  -webkit-transition: color 0.3s linear;
+  -moz-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  webkit-font-smoothing: antialiased;
+  font-family: "Raleway", Times, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #333333;
+  background: url("../assets/img/halftone.png");
+  /* Headings */
+}
+body a {
+  color: #ae956b;
+  text-decoration: none;
+  -webkit-transition: color 0.3s linear;
+  -moz-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+body a:hover {
+  color: #685940;
+  text-decoration: none;
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: 1em;
+  margin-bottom: .5em;
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-weight: 300;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  letter-spacing: -1px;
+  line-height: 1.5em;
+  margin-bottom: 0;
+}
+body h4, body h5, body h6 {
+  letter-spacing: 0;
+  margin: 0;
+}
+body p {
+  margin-bottom: .5em;
+}
+body hr {
+  border-top: 1px solid #555555;
+}
+body #header {
+  background: #111111;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em 2em;
+  overflow: hidden;
+  border-bottom: 5px solid #ae956b;
+}
+body #header h1 {
+  text-align: center;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+body #header h3 {
+  text-align: center;
+  color: #6e6e6e;
+  font-family: "Raleway", Times, "Times New Roman", serif;
+  font-style: italic;
+  letter-spacing: 0;
+  margin-top: .5em;
+}
+body #container {
+  padding: 0;
+}
+body #container img {
+  max-width: 100%;
+  height: auto;
+}
+body #container .content {
+  background: url("../assets/img/halftone.png");
+}
+body #container .content ul {
+  list-style: none;
+  padding-left: 1em;
+  text-indent: -1.5em;
+  margin-right: .5em;
+}
+body #container .content ul li {
+  margin-bottom: .5em;
+}
+body #container .content ul li:before {
+  content: '\e815';
+  font-family: 'icons-binding';
+  margin-right: .75em;
+}
+body #container .content .scroller {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+body #container .entry {
+  width: 95%;
+  margin: 0 auto 3em;
+}
+body #container .entry .entry-header {
+  margin-bottom: 1em;
+  overflow: hidden;
+  border-bottom: 1px solid #aaa;
+}
+body #container .entry .entry-header .entry-title {
+  font-size: 2em;
+  border-bottom: 3px solid #333333;
+  padding-bottom: .25em;
+  margin-bottom: .5em;
+  line-height: 1.2em;
+  text-transform: uppercase;
+}
+body #container .entry .entry-header .entry-title a {
+  color: #333333;
+}
+body #container .entry .entry-header .entry-title a:hover {
+  color: #ae956b;
+}
+body #container .entry .entry-header .entry-meta {
+  font-size: .85em;
+  float: left;
+  margin-bottom: 1em;
+}
+body #container .entry .entry-header .entry-meta a {
+  color: #333333;
+}
+body #container .entry .entry-header .entry-meta a:hover {
+  color: #ae956b;
+}
+body #container .entry .entry-header .entry-meta .entry-date {
+  margin-right: 1em;
+}
+body #container .entry .entry-header .share {
+  float: right;
+}
+body #container .entry .entry-content {
+  margin-bottom: 1em;
+  overflow: hidden;
+}
+body #container .entry .entry-content img {
+  border: 1px solid #333333;
+  margin-bottom: 1em;
+}
+body #container .entry .entry-footer {
+  overflow: hidden;
+  border-top: 1px solid #aaa;
+  padding-top: 1em;
+}
+body #container .entry .entry-footer .share {
+  text-align: right;
+  margin-bottom: 1em;
+}
+body #container .entry .entry-footer #footer {
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  font-family: "Raleway", Times, "Times New Roman", serif;
+  font-size: .85em;
+  padding: 1em 1em 1em 0;
+  color: #6e6e6e;
+}
+body #container .entry .entry-footer #footer h4 {
+  font-family: "Raleway", Times, "Times New Roman", serif;
+}
+body #container .entry .entry-footer #footer a {
+  color: #6e6e6e;
+}
+body #container .entry .entry-footer #footer a:hover {
+  color: #ae956b;
+}
+body #container .footer-widgets {
+  overflow: hidden;
+  width: 95%;
+  margin: 0 auto;
+}
+body #container .footer-widgets .widget {
+  margin-bottom: 2em;
+}
+body #container .footer-widgets .widget h3 {
+  border-bottom: 1px solid #aaa;
+  padding-bottom: .25em;
+  margin-bottom: 1em;
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+body #container .footer-widgets .widget .social-icon i {
+  font-size: 1.25em;
+}
+body #container .footer-widgets .widget .social-icon i:hover {
+  -webkit-transition: color 0.3s linear;
+  -moz-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+
+@media only screen and (min-width: 769px) {
+  body #header h1 {
+    float: left;
+    text-align: left;
+  }
+  body #header h3 {
+    float: right;
+    text-align: right;
+  }
+  body #container .content .scroller .entry {
+    float: left;
+    width: 66%;
+    padding: 0 2em;
+    border-right: 1px solid #aaa;
+    margin-bottom: 0;
+  }
+  body #container .content .scroller .footer-widgets {
+    float: right;
+    width: 33%;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  body #container .content .scroller .footer-widgets .widget {
+    width: 100%;
+    padding-right: 1em;
+  }
+
+  .js .content {
+    left: 0;
+  }
+
+  .menu-button {
+    left: 2em;
+  }
+}
+/* ===========================================
+Icon Brand Colors
+=========================================== */
+.color-gplus {
+  color: #dd4b39;
+}
+
+.color-facebook {
+  color: #3b5998;
+}
+
+.color-twitter {
+  color: #55acee;
+}
+
+.color-github {
+  color: #333333;
+}
+
+.color-pinterest {
+  color: #cc2127;
+}
+
+.color-tumblr {
+  color: #35465c;
+}
+
+.color-dribbble {
+  color: #ea4c89;
+}
+
+.color-youtube {
+  color: #e52d27;
+}
+
+.color-digg {
+  color: #333333;
+}
+
+.color-stumbleupon {
+  color: #eb4924;
+}
+
+.color-linkedin {
+  color: #0976b4;
+}
+
+.color-reddit {
+  color: #ff4500;
+}
+
+.color-vine {
+  color: #00b488;
+}
+
+.color-instagram {
+  color: #3f729b;
+}
+
+.color-delicious {
+  color: #3399ff;
+}
+
+.color-behance {
+  color: #1769ff;
+}
+
+.color-mail {
+  color: #333333;
+}
+
+.color-mobile {
+  color: #333333;
+}
+
+.color-location {
+  color: #333333;
+}
+
+.color-gplus:hover {
+  color: #842d22;
+}
+
+.color-facebook:hover {
+  color: #23355b;
+}
+
+.color-twitter:hover {
+  color: #33678e;
+}
+
+.color-github:hover {
+  color: #1e1e1e;
+}
+
+.color-pinterest:hover {
+  color: #7a1317;
+}
+
+.color-tumblr:hover {
+  color: #1f2a37;
+}
+
+.color-dribbble:hover {
+  color: #8c2d52;
+}
+
+.color-youtube:hover {
+  color: #891b17;
+}
+
+.color-digg:hover {
+  color: black;
+}
+
+.color-stumbleupon:hover {
+  color: #8d2b15;
+}
+
+.color-linkedin:hover {
+  color: #05466c;
+}
+
+.color-reddit:hover {
+  color: #992900;
+}
+
+.color-vine:hover {
+  color: #006c51;
+}
+
+.color-instagram:hover {
+  color: #25445d;
+}
+
+.color-delicious:hover {
+  color: #1e5b99;
+}
+
+.color-behance:hover {
+  color: #0d3f99;
+}
+
+.color-mail:hover {
+  color: #1e1e1e;
+}
+
+.color-mobile:hover {
+  color: #1e1e1e;
+}
+
+.color-location:hover {
+  color: #1e1e1e;
+}

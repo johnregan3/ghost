@@ -1,0 +1,23 @@
+/* Reset is included with Bootstrap CSS */
+
+@import 'compass/css3';
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/transition";
+
+/* Set Primary Font */
+$primary-font: 'Open Sans', Arial, Helvetica, sans-serif;
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300');
+
+/* Set Secondary Font for Headings */
+$secondary-font: 'Noto Serif', Times, 'Times New Roman', serif;
+@import url('http://fonts.googleapis.com/css?family=Noto+Serif:400,700');
+
+
+$text-color: #000;
+$primary-color: #f00;
+$secondary-color: #c00;
+
+$line-height: 1.5em;
+
+@import 'base';
+@import 'desktop';

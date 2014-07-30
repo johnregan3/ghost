@@ -1,0 +1,757 @@
+/* Reset is included with Bootstrap CSS */
+/* Icon Font */
+@import url("../css/icons.css");
+/* Animate.css */
+@import url("../css/animate.css");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300");
+/* ===========================================
+Base Styles
+
+Includes General Styles as well as Style for
+mobile resolutions
+=========================================== */
+@import url("../css/bxslider.css");
+* {
+  /* !important used to override Boostrap border-radii */
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  -ms-border-radius: 0 !important;
+  -o-border-radius: 0 !important;
+  border-radius: 0 !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  webkit-font-smoothing: antialiased;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #666666;
+  /* Headings */
+  /* Boostrap Resets */
+  /* Structure */
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: 1em;
+  margin-bottom: .5em;
+}
+body p {
+  margin-bottom: .5em;
+}
+body h1, body .h1, body h2, body .h2, body h3, body .h3 {
+  margin-top: 0;
+}
+body .navbar-default {
+  background: transparent;
+  border: 0;
+}
+body .navbar-default .container-fluid .dropdown-menu {
+  font-size: 1em;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding-bottom: 0;
+}
+body #header .inner, body .container-fluid, body #content, body #footer .inner {
+  max-width: 960px;
+  width: 90%;
+  margin: 0 auto;
+}
+body #primary, body #secondary {
+  margin-bottom: 1.5em;
+}
+body #footer {
+  padding: 1em 0;
+}
+
+/* body */
+/* ===========================================
+Desktop Styles
+
+Includes Style for Desktop resolutions
+=========================================== */
+@media only screen and (min-width: 769px) {
+  body {
+    /* Grid styles only apply at desktop resolution */
+    /* ===========================================
+    Grid Layout
+    
+    http://css-tricks.com/dont-overthink-it-grids/
+    =========================================== */
+    /* Opt-in outside padding */
+  }
+  body .grid {
+    margin: 0 0 1px 0;
+    overflow: hidden;
+    *zoom: 1;
+  }
+  body [class*='col-'] {
+    float: left;
+    padding-right: 2em;
+  }
+  body .grid [class*='col-']:last-child {
+    padding-right: 0;
+  }
+  body .col-2-3 {
+    width: 66.66%;
+  }
+  body .col-1-3 {
+    width: 33.33%;
+  }
+  body .col-1-2 {
+    width: 50%;
+  }
+  body .col-1-4 {
+    width: 25%;
+  }
+  body .col-1-8 {
+    width: 12.5%;
+  }
+  body .grid-pad {
+    padding: 2em 0 2em 2em;
+  }
+  body .grid-pad [class*='col-']:last-of-type {
+    padding-right: 2em;
+  }
+  body .navbar-default .container-fluid {
+    padding: 0;
+  }
+
+  /* body */
+}
+/* Media Query */
+/* ===========================================
+Icon Brand Colors
+=========================================== */
+.color-gplus {
+  color: #dd4b39;
+}
+
+.color-facebook {
+  color: #3b5998;
+}
+
+.color-twitter {
+  color: #55acee;
+}
+
+.color-github {
+  color: #666666;
+}
+
+.color-pinterest {
+  color: #cc2127;
+}
+
+.color-tumblr {
+  color: #35465c;
+}
+
+.color-dribbble {
+  color: #ea4c89;
+}
+
+.color-youtube {
+  color: #e52d27;
+}
+
+.color-digg {
+  color: #666666;
+}
+
+.color-stumbleupon {
+  color: #eb4924;
+}
+
+.color-linkedin {
+  color: #0976b4;
+}
+
+.color-reddit {
+  color: #ff4500;
+}
+
+.color-vine {
+  color: #00b488;
+}
+
+.color-instagram {
+  color: #3f729b;
+}
+
+.color-delicious {
+  color: #3399ff;
+}
+
+.color-behance {
+  color: #1769ff;
+}
+
+.color-mail {
+  color: #666666;
+}
+
+.color-mobile {
+  color: #666666;
+}
+
+.color-location {
+  color: #666666;
+}
+
+.color-gplus:hover {
+  color: #ea9388;
+}
+
+.color-facebook:hover {
+  color: #899bc1;
+}
+
+.color-twitter:hover {
+  color: #99cdf4;
+}
+
+.color-github:hover {
+  color: #848484;
+}
+
+.color-pinterest:hover {
+  color: #e0797d;
+}
+
+.color-tumblr:hover {
+  color: #85909d;
+}
+
+.color-dribbble:hover {
+  color: #f293b8;
+}
+
+.color-youtube:hover {
+  color: #ef817d;
+}
+
+.color-digg:hover {
+  color: #666666;
+}
+
+.color-stumbleupon:hover {
+  color: #f3917b;
+}
+
+.color-linkedin:hover {
+  color: #6bacd2;
+}
+
+.color-reddit:hover {
+  color: #ff8f66;
+}
+
+.color-vine:hover {
+  color: #66d2b7;
+}
+
+.color-instagram:hover {
+  color: #8baac3;
+}
+
+.color-delicious:hover {
+  color: #84c1ff;
+}
+
+.color-behance:hover {
+  color: #73a5ff;
+}
+
+.color-mail:hover {
+  color: #a3a3a3;
+}
+
+.color-mobile:hover {
+  color: #a3a3a3;
+}
+
+.color-location:hover {
+  color: #a3a3a3;
+}
+
+/* ===========================================
+Base Styles for Elemental
+
+Includes General Styles as well as Style for
+mobile resolutions
+
+Demo Image:
+https://www.flickr.com/photos/simon__syon/8647250845/in/photolist-eb8qpP-dru6Hg-fGTcBK-eLF7wp-dYEHR2-eCrqS2-eaDuUx-gj4TkK-h8BtZH-fqMQEp-iLJgba-jaH1tP-hrWLhB-iiBznh-kiN76q-njukyo-dS8Mv2-e4cMEf-hXtq8n-ehc1pn-fQwmi6-edXLE6-ANFJ-4pE46t-5n2RRs-5KVJm3-iDcWDL-Q379X-71shr-nm3WnW-exjFda-4uaf29-my72XD-f5qQRG-7nxm4R-9TbPNR-ctmqFC-mKgwv5-aaM5Ru-4CJLsG-bPCeMZ-3RQDe-gtFXDk-e45FBT-izLDxu-nFcGwG-f2cKBn-ec7is8-nN3hst-8jpVFX
+=========================================== */
+body {
+  font-weight: 300;
+  text-shadow: 1px 1px 0px white;
+  background: white url("../assets/img/helium.png");
+  /* Home Page Styles */
+}
+body a {
+  color: #5d99d6;
+  text-decoration: none;
+}
+body a:hover {
+  color: #9dc1e6;
+  text-decoration: none;
+  -webkit-transition: color 0.3s linear;
+  -moz-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-weight: 300;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  letter-spacing: -1px;
+  line-height: 1.5em;
+  margin-bottom: 0;
+}
+body h4, body h5, body h6 {
+  letter-spacing: 0;
+  margin: 0;
+}
+body hr {
+  border-top: 1px solid #eeeeee;
+}
+body #header {
+  background: #f9f9f9;
+  padding: 2em 0;
+  border-bottom: 1px solid #eeeeee;
+  margin-bottom: 2em;
+}
+body #header .site-description {
+  font-size: 1.25em;
+}
+body #cover-image .inner {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto 2em;
+}
+body #cover-image .inner img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #eeeeee;
+  -webkit-border-radius: 3px !important;
+  -moz-border-radius: 3px !important;
+  -ms-border-radius: 3px !important;
+  -o-border-radius: 3px !important;
+  border-radius: 3px !important;
+}
+body #content {
+  margin-bottom: 2em;
+}
+body #content ul {
+  list-style: none;
+  padding-left: 1em;
+  text-indent: -1.5em;
+}
+body #content ul li {
+  margin-bottom: .5em;
+}
+body #content ul li:before {
+  content: '\e815';
+  font-family: 'icons-helium';
+  margin-right: .75em;
+}
+body #content ol {
+  padding-left: 2em;
+}
+body #content ol li {
+  margin-bottom: .5em;
+}
+body #content pre {
+  -webkit-border-radius: 3px !important;
+  -moz-border-radius: 3px !important;
+  -ms-border-radius: 3px !important;
+  -o-border-radius: 3px !important;
+  border-radius: 3px !important;
+}
+body #content #primary .tag-archive-header h1 {
+  margin-bottom: 1em;
+}
+body #content #primary .entry {
+  /* Used on Archive Loop */
+}
+body #content #primary .entry .entry-image {
+  margin-bottom: 1em;
+}
+body #content #primary .entry .entry-header {
+  margin-bottom: 1em;
+  overflow: hidden;
+}
+body #content #primary .entry .entry-header .entry-meta {
+  float: left;
+  font-size: .85em;
+}
+body #content #primary .entry .entry-header .entry-meta .entry-date {
+  color: #666666;
+}
+body #content #primary .entry .entry-header .entry-meta .entry-date:hover {
+  color: #5d99d6;
+}
+body #content #primary .entry .entry-header .entry-meta .entry-author {
+  padding-left: 1em;
+}
+body #content #primary .entry .share {
+  float: right;
+}
+body #content #primary .entry .entry-content img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1em;
+  border: 1px solid #eeeeee;
+  -webkit-border-radius: 3px !important;
+  -moz-border-radius: 3px !important;
+  -ms-border-radius: 3px !important;
+  -o-border-radius: 3px !important;
+  border-radius: 3px !important;
+}
+body #content #primary .entry .entry-footer {
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+body #content #primary .entry .entry-footer .tags .icon-tags {
+  margin-right: .5em;
+}
+body #content #primary .entry #post-pagination {
+  overflow: hidden;
+  width: 100%;
+}
+body #content #primary .entry #post-pagination .left {
+  float: left;
+}
+body #content #primary .entry #post-pagination .right {
+  float: right;
+}
+body #content #primary .entry.excerpt img {
+  max-width: 100%;
+  -webkit-border-radius: 3px !important;
+  -moz-border-radius: 3px !important;
+  -ms-border-radius: 3px !important;
+  -o-border-radius: 3px !important;
+  border-radius: 3px !important;
+}
+body #content #secondary {
+  background: #f9f9f9;
+  border: 1px solid #eeeeee;
+  padding: 2em;
+  -webkit-border-radius: 3px !important;
+  -moz-border-radius: 3px !important;
+  -ms-border-radius: 3px !important;
+  -o-border-radius: 3px !important;
+  border-radius: 3px !important;
+}
+body #content #secondary .widget {
+  margin-bottom: 2em;
+}
+body #content #secondary .widget img {
+  max-width: 100%;
+  height: auto;
+}
+body #content #secondary .widget h3 {
+  padding-bottom: .5em;
+  border-bottom: 1px solid #eeeeee;
+  margin-bottom: .5em;
+}
+body #footer {
+  background: #f9f9f9;
+  border-top: 1px solid #eeeeee;
+  padding: 2em 0;
+  font-size: .85em;
+  color: #b2b2b2;
+  text-align: center;
+}
+body #footer .inner {
+  overflow: hidden;
+}
+body #footer a.social-icon i {
+  color: #b2b2b2;
+}
+body #footer a.social-icon:hover i {
+  color: #b9b9b9;
+  -webkit-transition: color 0.3s linear;
+  -moz-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+body #footer h4 {
+  font-size: .85em;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+body #footer h4 a {
+  color: #b2b2b2;
+}
+body.home-template #content #primary .entry-header {
+  margin-bottom: .5em;
+}
+body.home-template #content #primary .entry-header .entry-title a {
+  color: #666666;
+}
+body.home-template #content #primary .entry-header .entry-title a:hover {
+  color: #5d99d6;
+}
+body.home-template #content #primary .short .entry-header {
+  margin-bottom: 0;
+}
+body.home-template #content #primary .short .entry-header .entry-title {
+  margin-bottom: 0;
+}
+
+/* body */
+/* ===========================================
+Desktop Styles for Elemental
+
+Includes Style for Desktop resolutions
+=========================================== */
+@media only screen and (min-width: 769px) {
+  body .entry-footer .tags {
+    float: left;
+    max-width: 50%;
+  }
+  body .entry-footer .share {
+    float: right;
+  }
+  body #footer {
+    text-align: left;
+  }
+  body #footer .left {
+    float: left;
+  }
+  body #footer .right {
+    float: right;
+  }
+
+  /* body */
+}
+/* Media Query */
+/* ===========================================
+Base Navigation Styles for Elemental
+=========================================== */
+.navbar-default {
+  margin: 0 auto 2em;
+}
+.navbar-default .navbar-toggle {
+  -webkit-border-radius: 3px !important;
+  -moz-border-radius: 3px !important;
+  -ms-border-radius: 3px !important;
+  -o-border-radius: 3px !important;
+  border-radius: 3px !important;
+  border-color: #eeeeee;
+}
+.navbar-default .navbar-toggle:hover {
+  background: white;
+}
+.navbar-default .container-fluid {
+  background: #f9f9f9;
+  border: 1px solid #eeeeee;
+  -webkit-border-radius: 3px !important;
+  -moz-border-radius: 3px !important;
+  -ms-border-radius: 3px !important;
+  -o-border-radius: 3px !important;
+  border-radius: 3px !important;
+}
+.navbar-default .container-fluid .navbar-nav li.active > a {
+  background: transparent;
+}
+.navbar-default .container-fluid .navbar-nav li.open a, .navbar-default .container-fluid .navbar-nav li.open a:active, .navbar-default .container-fluid .navbar-nav li.open a:focus {
+  color: #666666;
+}
+.navbar-default .container-fluid .navbar-nav li a {
+  padding: .75em 1.5em;
+  color: #666666;
+}
+.navbar-default .container-fluid .navbar-nav li a:hover {
+  color: #5d99d6;
+}
+.navbar-default .container-fluid .navbar-nav li .dropdown-menu {
+  background: #f9f9f9;
+  border: 1px solid #eeeeee;
+}
+.navbar-default .container-fluid .navbar-nav li .dropdown-menu li a {
+  border-bottom: 1px solid #eeeeee;
+  color: #666666;
+}
+.navbar-default .container-fluid .navbar-nav li .dropdown-menu li a:active, .navbar-default .container-fluid .navbar-nav li .dropdown-menu li a:focus {
+  color: #666666;
+}
+.navbar-default .container-fluid .navbar-nav li .dropdown-menu li a:hover {
+  color: #5d99d6;
+}
+.navbar-default .container-fluid .navbar-nav li .dropdown-menu li:last-child a {
+  border-bottom: 0;
+}
+.navbar-default .container-fluid .navbar-nav li .dropdown-menu .divider {
+  /* Sass Note: This variable is used on purpose */
+  background-color: #eeeeee;
+  margin: 3px 0;
+}
+.navbar-default .container-fluid .navbar-nav li.open a.dropdown-toggle:focus {
+  border-right: 1px solid #eeeeee;
+}
+.navbar-default .container-fluid .navbar-nav li.open a, .navbar-default .container-fluid .navbar-nav li.open a:hover, .navbar-default .container-fluid .navbar-nav li.open a:focus {
+  border-left: transparent;
+  border-right: transparent;
+  background-color: transparent;
+}
+
+/* ===========================================
+Base Navigation Styles for Elemental
+=========================================== */
+@media only screen and (min-width: 769px) {
+  .navbar-default .navbar-collapse {
+    padding: 0;
+  }
+  .navbar-default .navbar-nav li a {
+    border-right: 1px solid #eeeeee;
+  }
+  .navbar-default .navbar-nav li .dropdown-menu a {
+    border-right: none;
+  }
+}
+/* ===========================================
+Base Rotator Styles for Elemental
+=========================================== */
+/* Bx Slider */
+.bx-wrapper .bx-viewport {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+  left: 0;
+}
+.bx-wrapper .bx-viewport #rotator {
+  width: 100%;
+  position: relative;
+}
+.bx-wrapper .bx-viewport #rotator .slide {
+  position: relative;
+  left: 0;
+}
+.bx-wrapper .bx-viewport #rotator .slide .caption {
+  width: 100%;
+  position: static;
+  left: 0px;
+  bottom: 0;
+  line-height: 1.5em;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+}
+.bx-wrapper .bx-viewport #rotator .slide .caption a {
+  color: #666666;
+}
+.bx-wrapper .bx-viewport #rotator .slide .caption a:hover {
+  color: #5d99d6;
+}
+.bx-wrapper .bx-viewport #rotator .slide .caption p {
+  margin-bottom: 0;
+}
+.bx-wrapper .bx-pager {
+  bottom: -3em;
+}
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background: #b2b2b2;
+  -webkit-transition: background 0.3s linear;
+  -moz-transition: background 0.3s linear;
+  -o-transition: background 0.3s linear;
+  transition: background 0.3s linear;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% / !important;
+  border-radius: 50% / !important;
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active {
+  background: #666666;
+}
+.bx-wrapper .bx-pager .bx-controls-auto {
+  bottom: -3em;
+}
+
+/* ===========================================
+Desktop Rotator Styles for Elemental
+=========================================== */
+@media only screen and (min-width: 769px) {
+  .bx-wrapper .bx-viewport #rotator .slide {
+    left: 0;
+  }
+  .bx-wrapper .bx-viewport #rotator .slide .caption {
+    position: absolute;
+    width: auto;
+    max-width: 66%;
+    padding: .5em 2em;
+    text-align: left;
+    border: 1px solid #eeeeee;
+    border-left: none;
+    -webkit-border-top-right-radius: 3px !important;
+    -moz-border-radius-topright: 3px !important;
+    border-top-right-radius: 3px !important;
+  }
+}
+/* ===========================================
+Social Icons Widget Styles for Elemental
+=========================================== */
+.widget.social-icons {
+  overflow: hidden;
+}
+.widget.social-icons .social-icon {
+  float: left;
+  margin-right: 1em;
+}
+.widget.social-icons .social-icon :hover {
+  -webkit-transition: color 0.3s linear;
+  -moz-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+
+/* ===========================================
+Color Styles for Elemental
+=========================================== */
+.red a,
+.red .bx-wrapper .bx-viewport #rotator .slide .caption a:hover,
+.red .navbar-default .container-fluid .navbar-nav li a:hover,
+.red .navbar-default .container-fluid .navbar-nav li .dropdown-menu li a:hover, .red.home-template #content #primary .entry-header .entry-title a:hover,
+.red #primary .entry .entry-header .entry-meta a.entry-date:hover,
+.red .home-template #content #primary .entry-title a:hover {
+  color: #d65d5d;
+}
+.red a:hover,
+.red #content #primary .entry .entry-header .entry-meta .entry-date:hover {
+  color: #e69d9d;
+}
+
+/* End Red */
+.green a,
+.green .bx-wrapper .bx-viewport #rotator .slide .caption a:hover,
+.green .navbar-default .container-fluid .navbar-nav li a:hover,
+.green .navbar-default .container-fluid .navbar-nav li .dropdown-menu li a:hover, .green.home-template #content #primary .entry-header .entry-title a:hover,
+.green #primary .entry .entry-header .entry-meta a.entry-date:hover,
+.green .home-template #content #primary .entry-title a:hover {
+  color: #5dd67c;
+}
+.green a:hover,
+.green #content #primary .entry .entry-header .entry-meta .entry-date:hover {
+  color: #9de6b0;
+}
+
+/* End Green */
+.orange a,
+.orange .bx-wrapper .bx-viewport #rotator .slide .caption a:hover,
+.orange .navbar-default .container-fluid .navbar-nav li a:hover,
+.orange .navbar-default .container-fluid .navbar-nav li .dropdown-menu li a:hover, .orange.home-template #content #primary .entry-header .entry-title a:hover,
+.orange #primary .entry .entry-header .entry-meta a.entry-date:hover,
+.orange .home-template #content #primary .entry-title a:hover {
+  color: #f0a910;
+}
+.orange a:hover,
+.orange #content #primary .entry .entry-header .entry-meta .entry-date:hover {
+  color: #f6cb6f;
+}
+
+/* End Orange */

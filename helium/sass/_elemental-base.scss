@@ -1,0 +1,272 @@
+/* ===========================================
+Base Styles for Elemental
+
+Includes General Styles as well as Style for
+mobile resolutions
+
+Demo Image:
+https://www.flickr.com/photos/simon__syon/8647250845/in/photolist-eb8qpP-dru6Hg-fGTcBK-eLF7wp-dYEHR2-eCrqS2-eaDuUx-gj4TkK-h8BtZH-fqMQEp-iLJgba-jaH1tP-hrWLhB-iiBznh-kiN76q-njukyo-dS8Mv2-e4cMEf-hXtq8n-ehc1pn-fQwmi6-edXLE6-ANFJ-4pE46t-5n2RRs-5KVJm3-iDcWDL-Q379X-71shr-nm3WnW-exjFda-4uaf29-my72XD-f5qQRG-7nxm4R-9TbPNR-ctmqFC-mKgwv5-aaM5Ru-4CJLsG-bPCeMZ-3RQDe-gtFXDk-e45FBT-izLDxu-nFcGwG-f2cKBn-ec7is8-nN3hst-8jpVFX
+=========================================== */
+
+body {
+	font-weight: 300;
+	text-shadow: 1px 1px 0px $primary-bg-color;
+	background: $background;
+
+	a {
+		color: $primary-color;
+		text-decoration: none;
+
+		&:hover {
+			color: tint($primary_color, 40%);
+			text-decoration: none;
+			@include single-transition(color, 0.3s, linear);
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: 300;
+		font-family: $secondary-font;
+		letter-spacing: -1px;
+		line-height: 1.5em;
+		margin-bottom: 0;
+	}
+
+	h4, h5, h6 {
+		letter-spacing: 0;
+		margin: 0;
+	}
+
+	hr {
+		border-top: 1px solid $border-color;
+	}
+
+	#header {
+		background: $secondary-bg-color;
+		padding: 2em 0;
+		border-bottom: 1px solid $border-color;
+		margin-bottom: 2em;
+
+		.site-description {
+			font-size: 1.25em;
+		}
+	}
+
+	#cover-image {
+
+		.inner {
+			max-width: 960px;
+			width: 100%;
+			margin: 0 auto 2em;
+
+			img {
+				width: 100%;
+				height: auto;
+				border: 1px solid $border-color;
+				@include border-radius($border-radius !important);
+			}
+		}
+	}
+
+	#content {
+		margin-bottom: 2em;
+
+		ul {
+			list-style: none;
+			padding-left: 1em;
+			text-indent: -1.5em;
+
+			li {
+				margin-bottom: .5em;
+
+				&:before {
+					content: '\e815';
+					font-family: 'icons-helium';
+					margin-right: .75em;
+				}
+			}
+		}
+
+		ol {
+			padding-left: 2em;
+
+			li {
+				margin-bottom: .5em;
+			}
+		}
+
+		pre {
+			@include border-radius($border-radius !important);
+		}
+
+		#primary {
+
+			.tag-archive-header h1 {
+				margin-bottom: 1em;
+			}
+
+			.entry {
+
+				.entry-image {
+					margin-bottom: 1em;
+				}
+
+				.entry-header {
+					margin-bottom: 1em;
+					overflow: hidden;
+
+					.entry-meta {
+						float: left;
+						font-size: .85em;
+
+						.entry-date {
+							color: $text-color;
+
+							&:hover {
+								color: $primary-color;
+							}
+						}
+
+						.entry-author {
+							padding-left: 1em;
+						}
+					}
+				}
+
+				.share {
+					float: right;
+				}
+
+				.entry-content {
+					img {
+						max-width: 100%;
+						height: auto;
+						margin-bottom: 1em;
+						border: 1px solid $border-color;
+						@include border-radius($border-radius !important);
+					}
+				}
+
+				.entry-footer {
+					overflow: hidden;
+					margin-bottom: 1em;
+
+					.tags {
+						.icon-tags {
+							margin-right: .5em;
+						}
+					}
+				}
+
+				#post-pagination {
+					overflow: hidden;
+					width: 100%;
+
+					.left {
+						float: left;
+					}
+
+					.right {
+						float: right;
+					}
+
+				}
+
+				/* Used on Archive Loop */
+				&.excerpt img {
+					max-width: 100%;
+					@include border-radius($border-radius !important);
+				}
+			}
+		}
+
+		#secondary {
+			background: $secondary-bg-color;
+			border: 1px solid $border-color;
+			padding: 2em;
+			@include border-radius($border-radius !important);
+
+			.widget {
+				margin-bottom: 2em;
+
+				img {
+					max-width: 100%;
+					height: auto;
+				}
+
+				h3 {
+					padding-bottom: .5em;
+					border-bottom: 1px solid $border-color;
+					margin-bottom: .5em;
+				}
+			}
+		}
+	}
+
+	#footer {
+		background: $secondary-bg-color;
+		border-top: 1px solid $border-color;
+		padding: 2em 0;
+		font-size: .85em;
+		color: $footer-text;
+		text-align: center;
+
+		.inner {
+			overflow: hidden;
+		}
+
+		a.social-icon {
+
+			i {
+				color: $footer-text;
+			}
+
+			&:hover i {
+				color: tint($footer-text, 10%);
+				@include single-transition(color, 0.3s, linear);
+			}
+		}
+
+		h4 {
+			font-size: .85em;
+			font-family: $primary-font;
+			a {
+				color: $footer-text;
+			}
+		}
+	}
+
+	/* Home Page Styles */
+	&.home-template {
+
+		#content {
+
+			#primary {
+
+				.entry-header {
+					margin-bottom: .5em;
+
+					.entry-title a {
+						color: $text-color;
+
+						&:hover {
+							color: $primary-color;
+						}
+					}
+
+				}
+
+				.short {
+
+					.entry-header {
+						margin-bottom: 0;
+
+						.entry-title {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+} /* body */
