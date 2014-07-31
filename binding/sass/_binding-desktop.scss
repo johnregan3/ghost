@@ -2,6 +2,7 @@
 
 body {
 		#header {
+			padding-bottom: 1em;
 			h1 {
 				float: left;
 				text-align: left;
@@ -21,16 +22,14 @@ body {
 					.entry {
 						float: left;
 						width: 66%;
-						padding: 0 2em;
-						border-right: 1px solid #aaa;
+						padding-right: 2em;
 						margin-bottom: 0;
 					}
 
-					.footer-widgets {
+					.sidebar-widgets {
 						float: right;
 						width: 33%;
-						padding-left: 1em;
-						padding-right: 1em;
+						margin-top: 2em;
 
 						.widget {
 							width: 100%;
@@ -51,4 +50,3 @@ body {
 	}
 
 }
-

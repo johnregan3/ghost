@@ -79,32 +79,32 @@ body {
 }
 
 .bb-custom-wrapper nav {
-	top: 1em;
+	top: -4.25em;
 	left: 50%;
 	position: absolute;
 	z-index: 1000;
-	margin-left: -2.25em;
-	width: 4.5em;
+	margin-left: -3em;
+	width: 2.5em;
 }
 
 .bb-custom-wrapper nav span,
 .menu-button {
 	position: absolute;
-	width: 2em;
-	height: 2em;
-	top: 0;
+	width: 1em;
+	height: 1em;
+	top: .5em;
 	left: 0;
-	background: #f1103a;
-	color: #fff;
-	line-height: 2em;
+	color: #111;
+	line-height: 1em;
 	text-align: center;
 	speak: none;
 	font-weight: bold;
 	cursor: pointer;
+	font-size: 2em;
 }
 
 .bb-custom-wrapper nav span:last-child {
-	left: 2.5em;
+	left: 2em;
 }
 
 .menu-button {
@@ -120,10 +120,10 @@ body {
 
 .js .content {
 	position: absolute;
-	top: 4em;
+	top: 0em;
 	left: 0;
 	width: 100%;
-	bottom: 2em;
+	bottom: 0;
 	overflow: hidden;
 	-webkit-font-smoothing: subpixel-antialiased;
 }

@@ -9,7 +9,7 @@
 <head>
 	<?php include( 'head.php' ) ?>
 </head>
-<body class="orange home-template">
+<body class="blue home-template">
 	<div class="page-wrap">
 		<?php include( 'header.php' ) ?>
 		<div id="below-header" class="animated fadeIn">

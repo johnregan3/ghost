@@ -3,7 +3,6 @@
 @import url("../assets/css/custom.css");
 @import url("../assets/css/icons.css");
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway);
-@import url(http://fonts.googleapis.com/css?family=Lora);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -65,40 +64,64 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   background: #111111;
 }
 
-.menu-toc li a {
-  background: #1c1c1c;
-  border-bottom: 1px solid #333333;
-}
-.menu-toc li a:hover, .menu-toc li a.menu-toc-current a {
-  background: #ae956b;
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #826f50), color-stop(100%, #ae956b));
-  background-image: -webkit-linear-gradient(left, #826f50, #ae956b);
-  background-image: -moz-linear-gradient(left, #826f50, #ae956b);
-  background-image: -o-linear-gradient(left, #826f50, #ae956b);
-  background-image: linear-gradient(left, #826f50, #ae956b);
-  color: #333333;
-}
-.menu-toc li.menu-toc-current a {
-  background: #ae956b;
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #826f50), color-stop(100%, #ae956b));
-  background-image: -webkit-linear-gradient(left, #826f50, #ae956b);
-  background-image: -moz-linear-gradient(left, #826f50, #ae956b);
-  background-image: -o-linear-gradient(left, #826f50, #ae956b);
-  background-image: linear-gradient(left, #826f50, #ae956b);
-  color: #333333;
-}
+/*
+.menu-toc {
 
+	li {
+		a {
+			background: tint( $primary-bg-color, 5% );
+			border-bottom: 1px solid $text-color;
+
+			&:hover, &.menu-toc-current a {
+				background: $primary-color;
+				@include background-image(linear-gradient(left, $shade, $primary-color));
+				color: $text-color;
+			}
+		}
+
+		&.menu-toc-current a {
+			background: $primary-color;
+			@include background-image(linear-gradient(left, $shade, $primary-color));
+			color: $text-color;
+		}
+	}
+}
+*/
 .bb-custom-wrapper nav span, .menu-button {
+  height: 1.1em;
   background: #111111;
+  border: 1px solid #aaaaaa;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+}
+.bb-custom-wrapper nav span:hover, .menu-button:hover {
+  background: #ae956b;
+  -webkit-transition: background 0.3s linear;
+  -moz-transition: background 0.3s linear;
+  -o-transition: background 0.3s linear;
+  transition: background 0.3s linear;
+  border: 1px solid #333333;
+}
+.bb-custom-wrapper nav span:hover i, .menu-button:hover i {
+  color: #333333;
+}
+.bb-custom-wrapper nav span i, .menu-button i {
+  color: #aaaaaa;
+}
+.bb-custom-wrapper nav span i:before, .menu-button i:before {
+  width: auto;
 }
 
 .content {
   padding-bottom: 5em;
-  text-shadow: 1px 1px 1px white;
+  border-top: 5px solid #ae956b;
 }
 
 .js .bb-item, .bb-bookblock, .bb-content {
-  background: url("../assets/img/halftone.png");
+  background: #111111;
 }
 
 .jspVerticalBar .jspCap {
@@ -115,15 +138,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   border-radius: 0;
 }
 
-.bb-custom-wrapper nav span:hover,
-.menu-button:hover {
-  color: #ae956b;
-  -webkit-transition: color 0.3s linear;
-  -moz-transition: color 0.3s linear;
-  -o-transition: color 0.3s linear;
-  transition: color 0.3s linear;
-}
-
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -137,6 +151,7 @@ body {
   line-height: 1.5em;
   color: #333333;
   background: url("../assets/img/halftone.png");
+  height: 100%;
   /* Headings */
 }
 body a {
@@ -180,7 +195,6 @@ body #header {
   margin: 0 auto;
   padding: 1em 2em;
   overflow: hidden;
-  border-bottom: 5px solid #ae956b;
 }
 body #header h1 {
   text-align: center;
@@ -189,7 +203,7 @@ body #header h1 {
 }
 body #header h3 {
   text-align: center;
-  color: #6e6e6e;
+  color: #555555;
   font-family: "Raleway", Times, "Times New Roman", serif;
   font-style: italic;
   letter-spacing: 0;
@@ -224,16 +238,20 @@ body #container .content .scroller {
   margin: 0 auto;
   max-width: 1200px;
 }
-body #container .entry {
-  width: 95%;
-  margin: 0 auto 3em;
+body #container .post-wrap {
+  overflow: hidden;
 }
-body #container .entry .entry-header {
+body #container .post-wrap .entry {
+  width: 95%;
+  margin: 2em auto 3em;
+  text-shadow: 1px 1px 1px white;
+}
+body #container .post-wrap .entry .entry-header {
   margin-bottom: 1em;
   overflow: hidden;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #aaaaaa;
 }
-body #container .entry .entry-header .entry-title {
+body #container .post-wrap .entry .entry-header .entry-title {
   font-size: 2em;
   border-bottom: 3px solid #333333;
   padding-bottom: .25em;
@@ -241,82 +259,90 @@ body #container .entry .entry-header .entry-title {
   line-height: 1.2em;
   text-transform: uppercase;
 }
-body #container .entry .entry-header .entry-title a {
+body #container .post-wrap .entry .entry-header .entry-title a {
   color: #333333;
 }
-body #container .entry .entry-header .entry-title a:hover {
+body #container .post-wrap .entry .entry-header .entry-title a:hover {
   color: #ae956b;
 }
-body #container .entry .entry-header .entry-meta {
+body #container .post-wrap .entry .entry-header .entry-meta {
   font-size: .85em;
   float: left;
   margin-bottom: 1em;
 }
-body #container .entry .entry-header .entry-meta a {
+body #container .post-wrap .entry .entry-header .entry-meta a {
   color: #333333;
 }
-body #container .entry .entry-header .entry-meta a:hover {
+body #container .post-wrap .entry .entry-header .entry-meta a:hover {
   color: #ae956b;
 }
-body #container .entry .entry-header .entry-meta .entry-date {
+body #container .post-wrap .entry .entry-header .entry-meta .entry-date {
   margin-right: 1em;
 }
-body #container .entry .entry-header .share {
+body #container .post-wrap .entry .entry-header .share {
   float: right;
 }
-body #container .entry .entry-content {
+body #container .post-wrap .entry .entry-content {
   margin-bottom: 1em;
   overflow: hidden;
 }
-body #container .entry .entry-content img {
+body #container .post-wrap .entry .entry-content img {
   border: 1px solid #333333;
   margin-bottom: 1em;
 }
-body #container .entry .entry-footer {
+body #container .post-wrap .entry .entry-footer {
   overflow: hidden;
-  border-top: 1px solid #aaa;
+  border-top: 1px solid #aaaaaa;
   padding-top: 1em;
-}
-body #container .entry .entry-footer .share {
-  text-align: right;
   margin-bottom: 1em;
 }
-body #container .entry .entry-footer #footer {
-  border-top: 1px solid #aaa;
-  border-bottom: 1px solid #aaa;
+body #container .post-wrap .entry .entry-footer .share {
+  text-align: right;
+}
+body #container #footer {
+  border-top: 1px solid #aaaaaa;
+  border-bottom: 1px solid #aaaaaa;
   font-family: "Raleway", Times, "Times New Roman", serif;
   font-size: .85em;
   padding: 1em 1em 1em 0;
-  color: #6e6e6e;
+  color: #555555;
+  margin-bottom: 2em;
 }
-body #container .entry .entry-footer #footer h4 {
+body #container #footer h4 {
   font-family: "Raleway", Times, "Times New Roman", serif;
 }
-body #container .entry .entry-footer #footer a {
-  color: #6e6e6e;
+body #container #footer a {
+  color: #555555;
 }
-body #container .entry .entry-footer #footer a:hover {
+body #container #footer a:hover {
   color: #ae956b;
 }
-body #container .footer-widgets {
+body #container .sidebar-widgets {
   overflow: hidden;
   width: 95%;
   margin: 0 auto;
-}
-body #container .footer-widgets .widget {
+  background: #111111;
+  padding: 2em 2em 0;
+  color: #aaaaaa;
+  border-top: 4px solid #ae956b;
+  border-bottom: 4px solid #ae956b;
   margin-bottom: 2em;
 }
-body #container .footer-widgets .widget h3 {
-  border-bottom: 1px solid #aaa;
+body #container .sidebar-widgets .widget {
+  margin-bottom: 2em;
+}
+body #container .sidebar-widgets .widget h3 {
+  border-bottom: 1px solid #ae956b;
+  color: #ae956b;
   padding-bottom: .25em;
   margin-bottom: 1em;
   font-size: 1.1em;
   text-transform: uppercase;
 }
-body #container .footer-widgets .widget .social-icon i {
+body #container .sidebar-widgets .widget .social-icon i {
   font-size: 1.25em;
 }
-body #container .footer-widgets .widget .social-icon i:hover {
+body #container .sidebar-widgets .widget .social-icon i:hover {
   -webkit-transition: color 0.3s linear;
   -moz-transition: color 0.3s linear;
   -o-transition: color 0.3s linear;
@@ -324,6 +350,9 @@ body #container .footer-widgets .widget .social-icon i:hover {
 }
 
 @media only screen and (min-width: 769px) {
+  body #header {
+    padding-bottom: 1em;
+  }
   body #header h1 {
     float: left;
     text-align: left;
@@ -335,17 +364,15 @@ body #container .footer-widgets .widget .social-icon i:hover {
   body #container .content .scroller .entry {
     float: left;
     width: 66%;
-    padding: 0 2em;
-    border-right: 1px solid #aaa;
+    padding-right: 2em;
     margin-bottom: 0;
   }
-  body #container .content .scroller .footer-widgets {
+  body #container .content .scroller .sidebar-widgets {
     float: right;
     width: 33%;
-    padding-left: 1em;
-    padding-right: 1em;
+    margin-top: 2em;
   }
-  body #container .content .scroller .footer-widgets .widget {
+  body #container .content .scroller .sidebar-widgets .widget {
     width: 100%;
     padding-right: 1em;
   }
@@ -374,7 +401,7 @@ Icon Brand Colors
 }
 
 .color-github {
-  color: #333333;
+  color: #aaaaaa;
 }
 
 .color-pinterest {
@@ -394,7 +421,7 @@ Icon Brand Colors
 }
 
 .color-digg {
-  color: #333333;
+  color: #aaaaaa;
 }
 
 .color-stumbleupon {
@@ -426,15 +453,15 @@ Icon Brand Colors
 }
 
 .color-mail {
-  color: #333333;
+  color: #aaaaaa;
 }
 
 .color-mobile {
-  color: #333333;
+  color: #aaaaaa;
 }
 
 .color-location {
-  color: #333333;
+  color: #aaaaaa;
 }
 
 .color-gplus:hover {
@@ -450,7 +477,7 @@ Icon Brand Colors
 }
 
 .color-github:hover {
-  color: #1e1e1e;
+  color: #666666;
 }
 
 .color-pinterest:hover {
@@ -474,7 +501,7 @@ Icon Brand Colors
 }
 
 .color-stumbleupon:hover {
-  color: #8d2b15;
+  color: #666666;
 }
 
 .color-linkedin:hover {
@@ -502,13 +529,13 @@ Icon Brand Colors
 }
 
 .color-mail:hover {
-  color: #1e1e1e;
+  color: #666666;
 }
 
 .color-mobile:hover {
-  color: #1e1e1e;
+  color: #666666;
 }
 
 .color-location:hover {
-  color: #1e1e1e;
+  color: #666666;
 }

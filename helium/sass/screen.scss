@@ -10,7 +10,10 @@
 /* Animate.css */
 @import url( '../css/animate.css');
 
-@import 'helium-variables';
+/* bootstrap */
+@import url( '../css/bootstrap.min.css');
+
+@import 'gold-variables';
 @import 'base';
 @import 'desktop';
 @import 'icon-colors';

@@ -9,6 +9,7 @@ body {
 	line-height: 1.5em;
 	color: $text-color;
 	background: $background;
+	height: 100%;
 
 	a {
 		color: $primary-color;
@@ -57,7 +58,7 @@ body {
 		margin: 0 auto;
 		padding: 1em 2em;
 		overflow: hidden;
-		border-bottom: 5px solid $primary-color;
+
 
 		h1 {
 			text-align: center;
@@ -109,106 +110,119 @@ body {
 			}
 		}
 
-		.entry {
-			width: 95%;
-			margin: 0 auto 3em;
+		.post-wrap {
+			overflow: hidden;
 
-			.entry-header {
-				margin-bottom: 1em;
-				overflow: hidden;
-				border-bottom: 1px solid #aaa;
+			.entry {
+				width: 95%;
+				margin: 2em auto 3em;
+				@include single-text-shadow;
 
-				.entry-title {
-					font-size: 2em;
-					border-bottom: 3px solid $text-color;
-					padding-bottom: .25em;
-					margin-bottom: .5em;
-					line-height: 1.2em;
-					text-transform: uppercase;
+				.entry-header {
+					margin-bottom: 1em;
+					overflow: hidden;
+					border-bottom: 1px solid $text-color-inverse;
 
-					a {
-						color: $text-color;
+					.entry-title {
+						font-size: 2em;
+						border-bottom: 3px solid $text-color;
+						padding-bottom: .25em;
+						margin-bottom: .5em;
+						line-height: 1.2em;
+						text-transform: uppercase;
 
-						&:hover {
-							color: $primary-color;
+						a {
+							color: $text-color;
+
+							&:hover {
+								color: $primary-color;
+							}
 						}
 					}
-				}
 
-				.entry-meta {
-					font-size: .85em;
-					float: left;
-					margin-bottom: 1em;
+					.entry-meta {
+						font-size: .85em;
+						float: left;
+						margin-bottom: 1em;
 
-					a {
-						color: $text-color;
+						a {
+							color: $text-color;
 
-						&:hover {
-							color: $primary-color;
+							&:hover {
+								color: $primary-color;
+							}
+						}
+						.entry-date {
+							margin-right: 1em;
 						}
 					}
-					.entry-date {
-						margin-right: 1em;
+					.share {
+						float: right;
 					}
 				}
-				.share {
-					float: right;
-				}
-			}
 
-			.entry-content {
-				margin-bottom: 1em;
-				overflow: hidden;
-
-				img {
-					border: 1px solid $text-color;
+				.entry-content {
 					margin-bottom: 1em;
-				}
-			}
+					overflow: hidden;
 
-			.entry-footer {
-				overflow: hidden;
-				border-top: 1px solid #aaa;
-				padding-top: 1em;
-
-				.share {
-					text-align: right;
-					margin-bottom: 1em;
-
-				}
-				#footer {
-					border-top: 1px solid #aaa;
-					border-bottom: 1px solid #aaa;
-					font-family: $primary-font;
-					font-size: .85em;
-					padding: 1em 1em 1em 0;
-					color: shade( $text-color-inverse, 50% );
-
-					h4 {
-						font-family: $primary-font;
+					img {
+						border: 1px solid $text-color;
+						margin-bottom: 1em;
 					}
+				}
 
-					a {
-						color: shade( $text-color-inverse, 50% );
+				.entry-footer {
+					overflow: hidden;
+					border-top: 1px solid $text-color-inverse;
+					padding-top: 1em;
+					margin-bottom: 1em;
 
-						&:hover {
-							color: $primary-color;
-						}
+					.share {
+						text-align: right;
 					}
 				}
 			}
 		}
 
-		.footer-widgets {
+		#footer {
+			border-top: 1px solid $text-color-inverse;
+			border-bottom: 1px solid $text-color-inverse;
+			font-family: $primary-font;
+			font-size: .85em;
+			padding: 1em 1em 1em 0;
+			color: shade( $text-color-inverse, 50% );
+			margin-bottom: 2em;
+
+			h4 {
+				font-family: $primary-font;
+			}
+
+			a {
+				color: shade( $text-color-inverse, 50% );
+
+				&:hover {
+					color: $primary-color;
+				}
+			}
+		}
+
+		.sidebar-widgets {
 			overflow: hidden;
 			width: 95%;
 			margin: 0 auto;
+			background: $primary-bg-color;
+			padding: 2em 2em 0;
+			color: $text-color-inverse;
+			border-top: 4px solid $primary-color;
+			border-bottom: 4px solid $primary-color;
+			margin-bottom: 2em;
 
 			.widget {
 				margin-bottom: 2em;
 
 				h3 {
-					border-bottom: 1px solid #aaa;
+					border-bottom: 1px solid $primary-color;
+					color: $primary-color;
 					padding-bottom: .25em;
 					margin-bottom: 1em;
 					font-size: 1.1em;

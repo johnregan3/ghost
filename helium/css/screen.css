@@ -3,7 +3,9 @@
 @import url("../css/icons.css");
 /* Animate.css */
 @import url("../css/animate.css");
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300");
+/* bootstrap */
+@import url("../css/bootstrap.min.css");
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway);
 /* ===========================================
 Base Styles
 
@@ -25,7 +27,7 @@ mobile resolutions
 
 body {
   webkit-font-smoothing: antialiased;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Raleway", Times, "Times New Roman", serif;
   font-size: 16px;
   line-height: 1.5em;
   color: #666666;
@@ -34,7 +36,7 @@ body {
   /* Structure */
 }
 body h1, body h2, body h3, body h4, body h5, body h6 {
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-weight: bold;
   line-height: 1em;
   margin-bottom: .5em;
@@ -290,16 +292,16 @@ https://www.flickr.com/photos/simon__syon/8647250845/in/photolist-eb8qpP-dru6Hg-
 =========================================== */
 body {
   font-weight: 300;
-  text-shadow: 1px 1px 0px white;
-  background: white url("../assets/img/helium.png");
+  text-shadow: 1px 1px 0px #555555;
+  background: #555555 url("../assets/img/halftone.png");
   /* Home Page Styles */
 }
 body a {
-  color: #5d99d6;
+  color: #ae956b;
   text-decoration: none;
 }
 body a:hover {
-  color: #9dc1e6;
+  color: #cebfa6;
   text-decoration: none;
   -webkit-transition: color 0.3s linear;
   -moz-transition: color 0.3s linear;
@@ -308,7 +310,7 @@ body a:hover {
 }
 body h1, body h2, body h3, body h4, body h5, body h6 {
   font-weight: 300;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   letter-spacing: -1px;
   line-height: 1.5em;
   margin-bottom: 0;
@@ -321,7 +323,7 @@ body hr {
   border-top: 1px solid #eeeeee;
 }
 body #header {
-  background: #f9f9f9;
+  background: #111111;
   padding: 2em 0;
   border-bottom: 1px solid #eeeeee;
   margin-bottom: 2em;
@@ -394,7 +396,7 @@ body #content #primary .entry .entry-header .entry-meta .entry-date {
   color: #666666;
 }
 body #content #primary .entry .entry-header .entry-meta .entry-date:hover {
-  color: #5d99d6;
+  color: #ae956b;
 }
 body #content #primary .entry .entry-header .entry-meta .entry-author {
   padding-left: 1em;
@@ -439,7 +441,7 @@ body #content #primary .entry.excerpt img {
   border-radius: 3px !important;
 }
 body #content #secondary {
-  background: #f9f9f9;
+  background: #111111;
   border: 1px solid #eeeeee;
   padding: 2em;
   -webkit-border-radius: 3px !important;
@@ -461,7 +463,7 @@ body #content #secondary .widget h3 {
   margin-bottom: .5em;
 }
 body #footer {
-  background: #f9f9f9;
+  background: #111111;
   border-top: 1px solid #eeeeee;
   padding: 2em 0;
   font-size: .85em;
@@ -483,7 +485,7 @@ body #footer a.social-icon:hover i {
 }
 body #footer h4 {
   font-size: .85em;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Raleway", Times, "Times New Roman", serif;
 }
 body #footer h4 a {
   color: #b2b2b2;
@@ -495,7 +497,7 @@ body.home-template #content #primary .entry-header .entry-title a {
   color: #666666;
 }
 body.home-template #content #primary .entry-header .entry-title a:hover {
-  color: #5d99d6;
+  color: #ae956b;
 }
 body.home-template #content #primary .short .entry-header {
   margin-bottom: 0;
@@ -546,10 +548,10 @@ Base Navigation Styles for Elemental
   border-color: #eeeeee;
 }
 .navbar-default .navbar-toggle:hover {
-  background: white;
+  background: #555555;
 }
 .navbar-default .container-fluid {
-  background: #f9f9f9;
+  background: #111111;
   border: 1px solid #eeeeee;
   -webkit-border-radius: 3px !important;
   -moz-border-radius: 3px !important;
@@ -568,10 +570,10 @@ Base Navigation Styles for Elemental
   color: #666666;
 }
 .navbar-default .container-fluid .navbar-nav li a:hover {
-  color: #5d99d6;
+  color: #ae956b;
 }
 .navbar-default .container-fluid .navbar-nav li .dropdown-menu {
-  background: #f9f9f9;
+  background: #111111;
   border: 1px solid #eeeeee;
 }
 .navbar-default .container-fluid .navbar-nav li .dropdown-menu li a {
@@ -582,7 +584,7 @@ Base Navigation Styles for Elemental
   color: #666666;
 }
 .navbar-default .container-fluid .navbar-nav li .dropdown-menu li a:hover {
-  color: #5d99d6;
+  color: #ae956b;
 }
 .navbar-default .container-fluid .navbar-nav li .dropdown-menu li:last-child a {
   border-bottom: 0;
@@ -642,13 +644,13 @@ Base Rotator Styles for Elemental
   bottom: 0;
   line-height: 1.5em;
   text-align: center;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(85, 85, 85, 0.9);
 }
 .bx-wrapper .bx-viewport #rotator .slide .caption a {
   color: #666666;
 }
 .bx-wrapper .bx-viewport #rotator .slide .caption a:hover {
-  color: #5d99d6;
+  color: #ae956b;
 }
 .bx-wrapper .bx-viewport #rotator .slide .caption p {
   margin-bottom: 0;

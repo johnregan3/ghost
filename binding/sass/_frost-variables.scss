@@ -1,0 +1,23 @@
+@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic);
+@import url(http://fonts.googleapis.com/css?family=Bitter);
+$primary-font: 'Gentium Book Basic', Times, 'Times New Roman', serif;
+$secondary-font: 'Bitter', Times, 'Times New Roman', serif;
+
+$background: #fff url( ../assets/img/helium.png );
+
+$gold  : #ae956b;
+$red   : #d65d5d;
+$blue  : #5d99d6;
+$green : #5dd67c;
+$orange: #f0a910;
+$primary-color: $blue;
+
+$text-color  : #555;
+$text-color-inverse: #999;
+$default-text-shadow-color: #fff;
+$default-text-shadow-v-offset: 1px;
+$default-text-shadow-h-offset: 1px;
+
+
+$border-color: #eee;
+$primary-bg-color: #eee;
