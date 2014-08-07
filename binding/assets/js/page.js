@@ -17,11 +17,10 @@ var Page = (function() {
 				updateTOC();
 				// updateNavigation
 				updateNavigation( isLimit );
-				// destroy jScrollPane on the content div for the old item
-				setJSP( 'destroy', old );
 				// initialize jScrollPane on the content div for the new item
 				setJSP( 'init' );
-
+				// destroy jScrollPane on the content div for the old item
+				setJSP( 'destroy', old );
 
 			}
 		} ),
@@ -44,6 +43,7 @@ var Page = (function() {
 		// initialize jScrollPane on the content div of the first item
 		setJSP( 'init' );
 		initEvents();
+
 	}
 
 	function initEvents() {
@@ -77,7 +77,6 @@ var Page = (function() {
 			}
 		} );
 
-		/*
 		// show table of contents
 		$tblcontents.on( 'click', toggleTOC );
 
@@ -95,7 +94,6 @@ var Page = (function() {
 			return false;
 
 		} );
-		*/
 
 		// reinit jScrollPane on window resize
 		$( window ).on( 'debouncedresize', function() {
@@ -130,29 +128,29 @@ var Page = (function() {
 	function updateNavigation( isLastPage ) {
 
 		if( current === 0 ) {
-			$navNext.fadeIn('fast');
-			$navPrev.fadeOut('slow');
+			$navNext.show();
+			$navPrev.hide();
 		}
 		else if( isLastPage ) {
-			$navNext.fadeOut('slow');
-			$navPrev.fadeIn('fast');
+			$navNext.hide();
+			$navPrev.show();
 		}
 		else {
-			$navNext.fadeIn('fast');
-			$navPrev.fadeIn('fast');
+			$navNext.show();
+			$navPrev.show();
 		}
 
 	}
 
-	/*
 	function toggleTOC() {
+		console.log( 'clicked' );
 		var opened = $container.data( 'opened' );
 		opened ? closeTOC() : openTOC();
 	}
 
 	function openTOC() {
-		$navNext.fadeOut('slow');
-		$navPrev.fadeOut('slow');
+		$navNext.hide();
+		$navPrev.hide();
 		$container.addClass( 'slideRight' ).data( 'opened', true );
 	}
 
@@ -173,7 +171,6 @@ var Page = (function() {
 		}
 
 	}
-	*/
 
 	return { init : init };
 

@@ -7,7 +7,9 @@
 			auto: false,
 			mode: 'fade',
 			adaptiveHeight: true,
-			speed: 500 //Rotator speed, in milliseconds
+			nextText: '',
+			prevText: '',
+			speed: 500, //Rotator speed, in milliseconds
 		});
 
 

@@ -59,89 +59,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* Icon Font */
-.menu-panel {
-  background: #111111;
-}
-
-/*
-.menu-toc {
-
-	li {
-		a {
-			background: tint( $primary-bg-color, 5% );
-			border-bottom: 1px solid $text-color;
-
-			&:hover, &.menu-toc-current a {
-				background: $primary-color;
-				@include background-image(linear-gradient(left, $shade, $primary-color));
-				color: $text-color;
-			}
-		}
-
-		&.menu-toc-current a {
-			background: $primary-color;
-			@include background-image(linear-gradient(left, $shade, $primary-color));
-			color: $text-color;
-		}
-	}
-}
-*/
-.bb-custom-wrapper nav span, .menu-button {
-  height: 1.1em;
-  background: #111111;
-  border: 1px solid #aaaaaa;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
-  border-radius: 2px;
-}
-.bb-custom-wrapper nav span:hover, .menu-button:hover {
-  background: #ae956b;
-  -webkit-transition: background 0.3s linear;
-  -moz-transition: background 0.3s linear;
-  -o-transition: background 0.3s linear;
-  transition: background 0.3s linear;
-  border: 1px solid #333333;
-}
-.bb-custom-wrapper nav span:hover i, .menu-button:hover i {
-  color: #333333;
-}
-.bb-custom-wrapper nav span i, .menu-button i {
-  color: #aaaaaa;
-}
-.bb-custom-wrapper nav span i:before, .menu-button i:before {
-  width: auto;
-}
-
-.content {
-  padding-bottom: 5em;
-  border-top: 5px solid #ae956b;
-}
-
-.js .bb-item, .bb-bookblock, .bb-content {
-  background: #111111;
-}
-
-.jspVerticalBar .jspCap {
-  height: 0;
-}
-
-.jspTrack {
-  background: transparent;
-  box-shadow: none;
-}
-
-.jspDrag {
-  background: #333333;
-  border-radius: 0;
-}
-
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+html {
+  height: 100%;
 }
 
 body {
@@ -243,7 +168,7 @@ body #container .post-wrap {
 }
 body #container .post-wrap .entry {
   width: 95%;
-  margin: 2em auto 3em;
+  margin: 3.5em auto 3em;
   text-shadow: 1px 1px 1px white;
 }
 body #container .post-wrap .entry .entry-header {
@@ -304,7 +229,7 @@ body #container #footer {
   border-bottom: 1px solid #aaaaaa;
   font-family: "Raleway", Times, "Times New Roman", serif;
   font-size: .85em;
-  padding: 1em 1em 1em 0;
+  padding: 1em 1em;
   color: #555555;
   margin-bottom: 2em;
 }
@@ -361,6 +286,9 @@ body #container .sidebar-widgets .widget .social-icon i:hover {
     float: right;
     text-align: right;
   }
+  body #container .content .scroller {
+    padding: 0 2.5em;
+  }
   body #container .content .scroller .entry {
     float: left;
     width: 66%;
@@ -376,13 +304,12 @@ body #container .sidebar-widgets .widget .social-icon i:hover {
     width: 100%;
     padding-right: 1em;
   }
+  body #container .content .scroller #footer {
+    padding-left: 0;
+  }
 
   .js .content {
     left: 0;
-  }
-
-  .menu-button {
-    left: 2em;
   }
 }
 /* ===========================================
@@ -538,4 +465,167 @@ Icon Brand Colors
 
 .color-location:hover {
   color: #666666;
+}
+
+.js body {
+  overflow: hidden;
+}
+.js body .content {
+  position: absolute;
+  top: 0em;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  overflow: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+.js body .content:before, .js body .content:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  z-index: 100;
+  pointer-events: none;
+}
+.js body .content:after {
+  top: auto;
+  bottom: 0;
+}
+
+.no-js .bb-custom-wrapper nav span {
+  display: none;
+}
+.no-js .container {
+  padding-left: 240px;
+}
+.no-js .content h2 {
+  padding: 40px 1% 20px;
+}
+
+.bb-custom-wrapper nav {
+  position: absolute;
+  z-index: 1000;
+}
+
+.bb-custom-wrapper nav span,
+.menu-button {
+  position: absolute;
+  width: 1em;
+  height: 1.1em;
+  line-height: 1em;
+  text-align: center;
+  speak: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 2em;
+  color: #ae956b;
+  background: #111111;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+.bb-custom-wrapper nav span:hover,
+.menu-button:hover {
+  -webkit-transition: background 0.3s linear;
+  -moz-transition: background 0.3s linear;
+  -o-transition: background 0.3s linear;
+  transition: background 0.3s linear;
+  color: #aaaaaa;
+}
+.bb-custom-wrapper nav span i:before,
+.menu-button i:before {
+  width: auto;
+}
+
+.menu-button {
+  font-size: 2em;
+  line-height: .75em;
+}
+.menu-button i {
+  font-size: .5em;
+}
+
+.menu-panel li {
+  border-bottom: 1px solid #221d15;
+}
+.menu-panel li.menu-toc-current {
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #685940), color-stop(100%, #ae956b));
+  background-image: -webkit-linear-gradient(left, #685940, #ae956b);
+  background-image: -moz-linear-gradient(left, #685940, #ae956b);
+  background-image: -o-linear-gradient(left, #685940, #ae956b);
+  background-image: linear-gradient(left, #685940, #ae956b);
+}
+.menu-panel li.menu-toc-current a {
+  color: #111111;
+  -webkit-transition: none 1s;
+  -moz-transition: none 1s;
+  -o-transition: none 1s;
+  transition: none 1s;
+}
+.menu-panel li a {
+  color: #aaaaaa;
+}
+.menu-panel li a:hover {
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #685940), color-stop(100%, #ae956b));
+  background-image: -webkit-linear-gradient(left, #685940, #ae956b);
+  background-image: -moz-linear-gradient(left, #685940, #ae956b);
+  background-image: -o-linear-gradient(left, #685940, #ae956b);
+  background-image: linear-gradient(left, #685940, #ae956b);
+  color: #111111;
+  -webkit-transition: none 1s;
+  -moz-transition: none 1s;
+  -o-transition: none 1s;
+  transition: none 1s;
+}
+
+.content {
+  padding-bottom: 5em;
+  border-top: 5px solid #ae956b;
+}
+
+.slideRight {
+  left: 240px;
+}
+
+.scroller {
+  padding: 10px 3em;
+}
+
+.container,
+.bb-custom-wrapper,
+.bb-bookblock {
+  width: 100%;
+  height: 100%;
+}
+
+.bb-item, .bb-bookblock, .bb-content {
+  background: #111111;
+}
+
+.jspVerticalBar .jspCap {
+  height: 0;
+}
+
+.jspTrack {
+  background: transparent;
+  box-shadow: none;
+}
+
+.jspDrag {
+  background: #333333;
+  border-radius: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .no-js .menu-panel {
+    display: none;
+  }
+
+  .no-js .container {
+    padding: 0;
+  }
 }

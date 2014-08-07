@@ -11,6 +11,9 @@ $orange: #f0a910;
 $primary-color  : $blue;
 $secondary-color: #000;
 $text-color     : #666;
+$text-shadow    : #fff;
+$sidebar-text-color : #666;
+$sidebar-text-shadow : #fff;
 $footer-text    : tint($text_color, 50%);
 
 $primary-bg-color  : #fff;
@@ -20,3 +23,7 @@ $border-color      : #eee;
 $border-radius: 3px;
 
 $background: $primary-bg-color url('../assets/img/helium.png');
+
+$footer-icon-url: '../assets/img/vapor-icon-20-bl.png';
+$footer-icon-opacity-first: 0.5;
+$footer-icon-opacity-second: 0.9;

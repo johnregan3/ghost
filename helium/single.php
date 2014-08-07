@@ -25,6 +25,6 @@
 	<!-- Boostrap.js -->
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	<script src="js/wow.min.js"></script>
-	<script src="js/helium.js"></script>
+	<script src="js/elemental.js"></script>
 </body>
 </html>

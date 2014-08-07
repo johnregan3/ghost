@@ -1,0 +1,22 @@
+@import url(http://fonts.googleapis.com/css?family=Orbitron);
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300');
+$primary-font: 'Open Sans', Arial, Helvetica, sans-serif;
+$secondary-font: 'Orbitron', Arial, Helvetica, sans-serif;
+
+$red   : #d65d5d;
+$blue  : #5d99d6;
+$green : #5dd67c;
+$orange: #f0a910;
+
+$primary-color  : #e24627;
+$secondary-color: #000;
+$text-color     : #999;
+$footer-text    : shade($text_color, 50%);
+
+$primary-bg-color  : #f8f8f8;
+$secondary-bg-color: #fff;
+$border-color      : #eee;
+
+$border-radius: 3px;
+
+$background: $primary-bg-color url('../assets/img/helium.png');

@@ -18,6 +18,7 @@ body {
 			.content {
 
 				.scroller {
+					padding: 0 2.5em;
 
 					.entry {
 						float: left;
@@ -36,6 +37,10 @@ body {
 							padding-right: 1em;
 						}
 					}
+
+					#footer {
+						padding-left: 0;
+					}
 				}
 			}
 		}
@@ -43,10 +48,6 @@ body {
 
 	.js .content {
 		left: 0;
-	}
-
-	.menu-button {
-		left: 2em;
 	}
 
 }

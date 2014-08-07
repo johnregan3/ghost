@@ -1,0 +1,52 @@
+@media only screen and (min-width: 769px) {
+
+body {
+		#header {
+			padding-bottom: 1em;
+			h1 {
+				float: left;
+				text-align: left;
+			}
+			h3 {
+				float: right;
+				text-align: right;
+			}
+
+		}
+		#container {
+
+			.content {
+
+				.scroller {
+
+					.entry {
+						float: left;
+						width: 66%;
+						padding-right: 2em;
+						margin-bottom: 0;
+					}
+
+					.sidebar-widgets {
+						float: right;
+						width: 33%;
+						margin-top: 2em;
+
+						.widget {
+							width: 100%;
+							padding-right: 1em;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.js .content {
+		left: 0;
+	}
+
+	.menu-button {
+		left: 2em;
+	}
+
+}

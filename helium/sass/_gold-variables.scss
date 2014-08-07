@@ -11,13 +11,16 @@ $gold  : #ae956b;
 
 $primary-color  : $gold;
 $secondary-color: #000;
-$text-color     : #666;
-$footer-text    : tint($text_color, 50%);
+$text-color     : #333;
+$text-shadow    : #aaa;
+$sidebar-text-color  : #888;
+$sidebar-text-shadow : #333;
+$footer-text    : $text-color;
 
-$primary-bg-color  : #555;
+$primary-bg-color  : #111;
 $secondary-bg-color: #111;
-$border-color      : #eee;
+$border-color      : #000;
 
-$border-radius: 3px;
+$border-radius: 1px;
 
-$background: $primary-bg-color url('../assets/img/halftone.png');
+$background: $primary-bg-color url('../assets/img/gold.png');

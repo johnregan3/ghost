@@ -5,12 +5,12 @@ Icon Brand Colors
 .color-gplus { color: #dd4b39; }
 .color-facebook { color: #3b5998; }
 .color-twitter { color: #55acee; }
-.color-github { color: $text-color; }
+.color-github { color: $sidebar-text-color; }
 .color-pinterest { color: #cc2127; }
 .color-tumblr { color: #35465c; }
 .color-dribbble { color: #ea4c89; }
 .color-youtube { color: #e52d27; }
-.color-digg { color: $text-color; }
+.color-digg { color: $sidebar-text-color; }
 .color-stumbleupon { color: #eb4924; }
 .color-linkedin { color: #0976b4; }
 .color-reddit { color: #ff4500; }
@@ -18,9 +18,9 @@ Icon Brand Colors
 .color-instagram { color: #3f729b; }
 .color-delicious { color: #3399ff; }
 .color-behance { color: #1769ff; }
-.color-mail { color: $text-color; }
-.color-mobile { color: $text-color; }
-.color-location { color: $text-color; }
+.color-mail { color: $sidebar-text-color; }
+.color-mobile { color: $sidebar-text-color; }
+.color-location { color: $sidebar-text-color; }
 
 
 .color-gplus:hover { color: tint( #dd4b39, 40% ); }
@@ -39,6 +39,6 @@ Icon Brand Colors
 .color-instagram:hover { color: tint( #3f729b, 40% ); }
 .color-delicious:hover { color: tint( #3399ff, 40% ); }
 .color-behance:hover { color: tint( #1769ff, 40% ); }
-.color-mail:hover { color: tint( $text-color, 40% ); }
-.color-mobile:hover { color: tint( $text-color, 40% ); }
-.color-location:hover { color: tint( $text-color, 40% ); }
+.color-mail:hover { color: tint( $sidebar-text-color, 40% ); }
+.color-mobile:hover { color: tint( $sidebar-text-color, 40% ); }
+.color-location:hover { color: tint( $sidebar-text-color, 40% ); }

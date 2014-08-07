@@ -10,7 +10,6 @@ https://www.flickr.com/photos/simon__syon/8647250845/in/photolist-eb8qpP-dru6Hg-
 
 body {
 	font-weight: 300;
-	text-shadow: 1px 1px 0px $primary-bg-color;
 	background: $background;
 
 	a {
@@ -46,6 +45,7 @@ body {
 		padding: 2em 0;
 		border-bottom: 1px solid $border-color;
 		margin-bottom: 2em;
+		color: $sidebar-text-color;
 
 		.site-description {
 			font-size: 1.25em;
@@ -70,6 +70,7 @@ body {
 
 	#content {
 		margin-bottom: 2em;
+		text-shadow: 1px 1px 0px $text-shadow;
 
 		ul {
 			list-style: none;
@@ -175,6 +176,7 @@ body {
 				/* Used on Archive Loop */
 				&.excerpt img {
 					max-width: 100%;
+					border: 1px solid $border-color;
 					@include border-radius($border-radius !important);
 				}
 			}
@@ -185,6 +187,8 @@ body {
 			border: 1px solid $border-color;
 			padding: 2em;
 			@include border-radius($border-radius !important);
+			text-shadow: 1px 1px 0px $sidebar-text-shadow;
+			color: $sidebar-text-color;
 
 			.widget {
 				margin-bottom: 2em;
@@ -232,6 +236,22 @@ body {
 			font-family: $primary-font;
 			a {
 				color: $footer-text;
+			}
+		}
+
+		.vapor-icon {
+			width: 1em;
+			height: 1em;
+			opacity: $footer-icon-opacity-first;
+			background: url( $footer-icon-url );
+			display: inline-block;
+			background-size: cover;
+			text-indent: -99999px;
+			line-height: 1em;
+
+			&:hover {
+				opacity: $footer-icon-opacity-second;
+				@include single-transition(opacity, 0.3s, linear);
 			}
 		}
 	}

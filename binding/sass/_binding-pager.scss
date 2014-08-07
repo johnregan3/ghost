@@ -1,54 +1,115 @@
-$shade : shade( $primary-color, 25% );
-.menu-panel {
-	background: $primary-bg-color;
-}
-/*
-.menu-toc {
+.js {
+	body {
+		overflow: hidden;
 
-	li {
-		a {
-			background: tint( $primary-bg-color, 5% );
-			border-bottom: 1px solid $text-color;
+		.content {
+			position: absolute;
+			top: 0em;
+			left: 0;
+			width: 100%;
+			bottom: 0;
+			overflow: hidden;
+			-webkit-font-smoothing: subpixel-antialiased;
 
-			&:hover, &.menu-toc-current a {
-				background: $primary-color;
-				@include background-image(linear-gradient(left, $shade, $primary-color));
-				color: $text-color;
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 20px;
+				z-index: 100;
+				pointer-events: none;
 			}
-		}
-
-		&.menu-toc-current a {
-			background: $primary-color;
-			@include background-image(linear-gradient(left, $shade, $primary-color));
-			color: $text-color;
+			&:after {
+				top: auto;
+				bottom: 0;
+			}
 		}
 	}
 }
-*/
 
-.bb-custom-wrapper nav span, .menu-button {
+.no-js {
+	.bb-custom-wrapper nav span {
+		display: none;
+	}
+
+	.container {
+		padding-left: 240px;
+	}
+
+	.content h2 {
+		padding: 40px 1% 20px;
+	}
+}
+
+.bb-custom-wrapper nav {
+	position: absolute;
+	z-index: 1000;
+}
+
+.bb-custom-wrapper nav span,
+.menu-button {
+
+	position: absolute;
+	width: 1em;
 	height: 1.1em;
+	line-height: 1em;
+	text-align: center;
+	speak: none;
+	font-weight: bold;
+	cursor: pointer;
+	font-size: 2em;
+	color: $primary-color;
 	background: $primary-bg-color;
-	border: 1px solid $text-color-inverse;
-	@include border-radius( 2px );
+
+	@include border-radius( 0 );
 
 	&:hover {
-		background: $primary-color;
 		@include single-transition(background, 0.3s, linear);
-		border: 1px solid $text-color;
-
-		i {
-			color: $text-color;
-		}
+		color: $text-color-inverse;
 	}
 
 	i {
-		color: $text-color-inverse;
-
 		&:before {
 			width: auto;
 		}
 	}
+}
+
+.menu-button {
+	font-size: 2em;
+	line-height: .75em;
+	i {
+		font-size: .5em;
+	}
+}
+
+.menu-panel {
+	li {
+		border-bottom: 1px solid shade($primary-color, 80%);
+
+		&.menu-toc-current {
+			@include background-image(linear-gradient(left, shade($primary-color, 40%), $primary-color ));
+			a {
+				color: $primary-bg-color;
+				@include single-transition(none);
+			}
+		}
+
+		a {
+			color: $text-color-inverse;
+
+			&:hover {
+				@include background-image(linear-gradient(left, shade($primary-color, 40%), $primary-color ));
+				color: $primary-bg-color;
+				@include single-transition(none);
+
+			}
+		}
+	}
+
 }
 
 .content {
@@ -56,7 +117,22 @@ $shade : shade( $primary-color, 25% );
 	border-top: 5px solid $primary-color;
 }
 
-.js .bb-item, .bb-bookblock, .bb-content {
+.slideRight {
+	left: 240px;
+}
+
+.scroller {
+	padding: 10px 3em;
+}
+
+.container,
+.bb-custom-wrapper,
+.bb-bookblock {
+	width: 100%;
+	height: 100%;
+}
+
+.bb-item, .bb-bookblock, .bb-content {
 	background: $primary-bg-color;
 }
 
@@ -73,4 +149,15 @@ $shade : shade( $primary-color, 25% );
 	background: $text-color;
 	border-radius: 0;
 }
+
+@media screen and (max-width: 800px){
+	.no-js .menu-panel {
+		display: none;
+	}
+
+	.no-js .container {
+		padding: 0;
+	}
+}
+
 

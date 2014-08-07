@@ -1,0 +1,247 @@
+* {
+	@include box-sizing(border-box);
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	webkit-font-smoothing: antialiased;
+	font-family: $primary-font;
+	font-size: 16px;
+	line-height: 1.5em;
+	color: $text-color;
+	background: $background;
+	height: 100%;
+
+	a {
+		color: $primary-color;
+		text-decoration: none;
+		@include single-transition(color, 0.3s, linear);
+
+		&:hover {
+			color: shade($primary_color, 40%);
+			text-decoration: none;
+		}
+	}
+
+	/* Headings */
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: $secondary-font;
+		font-weight: bold;
+		line-height: 1em;
+		margin-bottom: .5em;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: 300;
+		font-family: $secondary-font;
+		letter-spacing: -1px;
+		line-height: 1.5em;
+		margin-bottom: 0;
+	}
+
+	h4, h5, h6 {
+		letter-spacing: 0;
+		margin: 0;
+	}
+
+	p {
+		margin-bottom: .5em;
+	}
+
+	hr {
+		border-top: 1px solid $border-color;
+	}
+
+	#header {
+		background: $primary-bg-color;
+		width: 100%;
+		margin: 0 auto;
+		padding: 1em 2em 4em;
+		overflow: hidden;
+
+
+		h1 {
+			text-align: center;
+			font-size: 1.5em;
+			text-transform: uppercase;
+		}
+
+		h3 {
+			text-align: center;
+			color: shade( $text-color-inverse, 50% );
+			font-family: $primary-font;
+			font-style: italic;
+			letter-spacing: 0;
+			margin-top: .5em;
+		}
+	}
+
+	#container {
+		padding: 0;
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		.content {
+			background: $background;
+			ul {
+				list-style: none;
+				padding-left: 1em;
+				text-indent: -1.5em;
+				margin-right: .5em;
+
+				li {
+					margin-bottom: .5em;
+
+					&:before {
+						content: '\e815';
+						font-family: 'icons-binding';
+						margin-right: .75em;
+					}
+				}
+			}
+
+			.scroller {
+				padding: 0;
+				margin: 0 auto;
+				max-width: 1200px;
+			}
+		}
+
+		.post-wrap {
+			overflow: hidden;
+
+			.entry {
+				width: 95%;
+				margin: 2em auto 3em;
+				@include single-text-shadow;
+
+				.entry-header {
+					margin-bottom: 1em;
+					overflow: hidden;
+					border-bottom: 1px solid $text-color-inverse;
+
+					.entry-title {
+						font-size: 2em;
+						border-bottom: 3px solid $text-color;
+						padding-bottom: .25em;
+						margin-bottom: .5em;
+						line-height: 1.2em;
+						text-transform: uppercase;
+
+						a {
+							color: $text-color;
+
+							&:hover {
+								color: $primary-color;
+							}
+						}
+					}
+
+					.entry-meta {
+						font-size: .85em;
+						float: left;
+						margin-bottom: 1em;
+
+						a {
+							color: $text-color;
+
+							&:hover {
+								color: $primary-color;
+							}
+						}
+						.entry-date {
+							margin-right: 1em;
+						}
+					}
+					.share {
+						float: right;
+					}
+				}
+
+				.entry-content {
+					margin-bottom: 1em;
+					overflow: hidden;
+
+					img {
+						border: 1px solid $text-color;
+						margin-bottom: 1em;
+					}
+				}
+
+				.entry-footer {
+					overflow: hidden;
+					border-top: 1px solid $text-color-inverse;
+					padding-top: 1em;
+					margin-bottom: 1em;
+
+					.share {
+						text-align: right;
+					}
+				}
+			}
+		}
+
+		#footer {
+			border-top: 1px solid $text-color-inverse;
+			border-bottom: 1px solid $text-color-inverse;
+			font-family: $primary-font;
+			font-size: .85em;
+			padding: 1em 1em 1em 0;
+			color: shade( $text-color-inverse, 50% );
+			margin-bottom: 2em;
+
+			h4 {
+				font-family: $primary-font;
+			}
+
+			a {
+				color: shade( $text-color-inverse, 50% );
+
+				&:hover {
+					color: $primary-color;
+				}
+			}
+		}
+
+		.sidebar-widgets {
+			overflow: hidden;
+			width: 95%;
+			margin: 0 auto;
+			background: $primary-bg-color;
+			padding: 2em 2em 0;
+			color: $text-color-inverse;
+			border-top: 4px solid $primary-color;
+			border-bottom: 4px solid $primary-color;
+			margin-bottom: 2em;
+
+			.widget {
+				margin-bottom: 2em;
+
+				h3 {
+					border-bottom: 1px solid $primary-color;
+					color: $primary-color;
+					padding-bottom: .25em;
+					margin-bottom: 1em;
+					font-size: 1.1em;
+					text-transform: uppercase;
+				}
+
+				.social-icon i {
+					font-size: 1.25em;
+					&:hover {
+						@include single-transition(color, 0.3s, linear);
+					}
+				}
+			}
+		}
+	}
+
+}
+

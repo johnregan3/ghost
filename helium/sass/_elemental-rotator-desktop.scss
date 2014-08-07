@@ -14,9 +14,9 @@ Desktop Rotator Styles for Elemental
 			text-align: left;
 			border: 1px solid $border-color;
 			border-left: none;
-			-webkit-border-top-right-radius: 3px !important;
-			-moz-border-radius-topright: 3px !important;
-			border-top-right-radius: 3px !important;
+			-webkit-border-top-right-radius: $border-radius !important;
+			-moz-border-radius-topright: $border-radius !important;
+			border-top-right-radius: $border-radius !important;
 		}
 	}
 }

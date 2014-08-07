@@ -2,6 +2,10 @@
 	@include box-sizing(border-box);
 }
 
+html {
+	height: 100%;
+}
+
 body {
 	webkit-font-smoothing: antialiased;
 	font-family: $primary-font;
@@ -115,7 +119,7 @@ body {
 
 			.entry {
 				width: 95%;
-				margin: 2em auto 3em;
+				margin: 3.5em auto 3em;
 				@include single-text-shadow;
 
 				.entry-header {
@@ -189,7 +193,7 @@ body {
 			border-bottom: 1px solid $text-color-inverse;
 			font-family: $primary-font;
 			font-size: .85em;
-			padding: 1em 1em 1em 0;
+			padding: 1em 1em;
 			color: shade( $text-color-inverse, 50% );
 			margin-bottom: 2em;
 
