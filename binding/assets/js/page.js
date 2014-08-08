@@ -43,6 +43,7 @@ var Page = (function() {
 		// initialize jScrollPane on the content div of the first item
 		setJSP( 'init' );
 		initEvents();
+		openTOC();
 
 	}
 
@@ -143,7 +144,6 @@ var Page = (function() {
 	}
 
 	function toggleTOC() {
-		console.log( 'clicked' );
 		var opened = $container.data( 'opened' );
 		opened ? closeTOC() : openTOC();
 	}

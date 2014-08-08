@@ -36,7 +36,7 @@
 	}
 
 	.container {
-		padding-left: 240px;
+		padding-left: 300px;
 	}
 
 	.content h2 {
@@ -47,28 +47,29 @@
 .bb-custom-wrapper nav {
 	position: absolute;
 	z-index: 1000;
+	font-size: 1em;
 }
 
 .bb-custom-wrapper nav span,
 .menu-button {
-
 	position: absolute;
-	width: 1em;
-	height: 1.1em;
-	line-height: 1em;
+	width: 32px;
+	height: 32px;
+	line-height: 1.65em;
 	text-align: center;
 	speak: none;
 	font-weight: bold;
 	cursor: pointer;
-	font-size: 2em;
+	font-size: 1em;
 	color: $primary-color;
 	background: $primary-bg-color;
-
-	@include border-radius( 0 );
+	@include border-radius(0);
+	padding-top: .25em;
 
 	&:hover {
 		@include single-transition(background, 0.3s, linear);
 		color: $text-color-inverse;
+		background: $primary-bg-color;
 	}
 
 	i {
@@ -79,19 +80,20 @@
 }
 
 .menu-button {
-	font-size: 2em;
-	line-height: .75em;
+	line-height: 1.8em;
 	i {
-		font-size: .5em;
+
 	}
 }
 
 .menu-panel {
+	background: $primary-bg-color;
+
 	li {
-		border-bottom: 1px solid shade($primary-color, 80%);
+		border-bottom: 1px solid $shade80;
 
 		&.menu-toc-current {
-			@include background-image(linear-gradient(left, shade($primary-color, 40%), $primary-color ));
+			@include background-image(linear-gradient(left, $tab-gradient, $primary-color ));
 			a {
 				color: $primary-bg-color;
 				@include single-transition(none);
@@ -102,10 +104,20 @@
 			color: $text-color-inverse;
 
 			&:hover {
-				@include background-image(linear-gradient(left, shade($primary-color, 40%), $primary-color ));
+				@include background-image(linear-gradient(left, $tab-gradient, $primary-color ));
 				color: $primary-bg-color;
 				@include single-transition(none);
 
+			}
+
+			h4 {
+				margin-bottom: .5em;
+				font-size: .8em;
+			}
+
+			p {
+				font-size: .6em;
+				line-height: 1.5em;
 			}
 		}
 	}
@@ -118,7 +130,7 @@
 }
 
 .slideRight {
-	left: 240px;
+	left: 300px;
 }
 
 .scroller {
@@ -136,8 +148,19 @@
 	background: $primary-bg-color;
 }
 
-.jspVerticalBar .jspCap {
-	height: 0;
+.menu-panel {
+	outline: none;
+
+	.jspVerticalBar {
+		display: none;
+	}
+}
+
+.jspVerticalBar {
+	width: 5px;
+	.jspCap {
+		height: 0;
+	}
 }
 
 .jspTrack {
@@ -146,8 +169,10 @@
 }
 
 .jspDrag {
-	background: $text-color;
+	background: $primary-color;
 	border-radius: 0;
+	border: none;
+	width: 5px;
 }
 
 @media screen and (max-width: 800px){

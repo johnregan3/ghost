@@ -2,7 +2,8 @@
 @import url("../assets/css/bookblock.css");
 @import url("../assets/css/custom.css");
 @import url("../assets/css/icons.css");
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway);
+@import url(http://fonts.googleapis.com/css?family=Gentium+Basic);
+@import url(http://fonts.googleapis.com/css?family=Bitter);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -71,16 +72,16 @@ html {
 
 body {
   webkit-font-smoothing: antialiased;
-  font-family: "Raleway", Times, "Times New Roman", serif;
+  font-family: "Gentium Basic", Times, "Times New Roman", serif;
   font-size: 16px;
-  line-height: 1.5em;
   color: #333333;
-  background: url("../assets/img/halftone.png");
+  background: white url(../assets/img/helium.png);
   height: 100%;
+  line-height: 1.5em;
   /* Headings */
 }
 body a {
-  color: #ae956b;
+  color: #954141;
   text-decoration: none;
   -webkit-transition: color 0.3s linear;
   -moz-transition: color 0.3s linear;
@@ -88,34 +89,52 @@ body a {
   transition: color 0.3s linear;
 }
 body a:hover {
-  color: #685940;
+  color: #592727;
   text-decoration: none;
 }
 body h1, body h2, body h3, body h4, body h5, body h6 {
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-family: "Bitter", Times, "Times New Roman", serif;
   font-weight: bold;
   line-height: 1em;
   margin-bottom: .5em;
 }
 body h1, body h2, body h3, body h4, body h5, body h6 {
   font-weight: 300;
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-family: "Bitter", Times, "Times New Roman", serif;
   letter-spacing: -1px;
   line-height: 1.5em;
-  margin-bottom: 0;
+  margin-bottom: .5em;
 }
 body h4, body h5, body h6 {
   letter-spacing: 0;
   margin: 0;
 }
+body h1 {
+  font-size: 1.75em;
+}
+body h2 {
+  font-size: 1.5em;
+}
+body h3 {
+  font-size: 1.3em;
+}
+body h4 {
+  font-size: 1em;
+}
+body h5 {
+  font-size: .9em;
+}
+body h6 {
+  font-size: .75em;
+}
 body p {
   margin-bottom: .5em;
 }
 body hr {
-  border-top: 1px solid #555555;
+  border-top: 1px solid #eeeeee;
 }
 body #header {
-  background: #111111;
+  background: #eeeeee;
   width: 100%;
   margin: 0 auto;
   padding: 1em 2em;
@@ -125,14 +144,17 @@ body #header h1 {
   text-align: center;
   font-size: 1.5em;
   text-transform: uppercase;
+  margin-bottom: 0;
 }
 body #header h3 {
   text-align: center;
-  color: #555555;
-  font-family: "Raleway", Times, "Times New Roman", serif;
+  color: #aaaaaa;
+  font-family: "Gentium Basic", Times, "Times New Roman", serif;
   font-style: italic;
   letter-spacing: 0;
   margin-top: .5em;
+  font-size: 1em;
+  margin-bottom: 0;
 }
 body #container {
   padding: 0;
@@ -142,21 +164,27 @@ body #container img {
   height: auto;
 }
 body #container .content {
-  background: url("../assets/img/halftone.png");
+  background: white url(../assets/img/helium.png);
+}
+body #container .content ul, body #container .content ol {
+  list-style: decimal;
+  padding-left: 1em;
+  margin-right: .5em;
+  margin-left: .25em;
+}
+body #container .content ul li, body #container .content ol li {
+  margin-bottom: .5em;
 }
 body #container .content ul {
   list-style: none;
-  padding-left: 1em;
   text-indent: -1.5em;
-  margin-right: .5em;
-}
-body #container .content ul li {
-  margin-bottom: .5em;
+  margin-left: .5em;
 }
 body #container .content ul li:before {
   content: '\e815';
   font-family: 'icons-binding';
   margin-right: .75em;
+  color: #333333;
 }
 body #container .content .scroller {
   padding: 0;
@@ -168,13 +196,13 @@ body #container .post-wrap {
 }
 body #container .post-wrap .entry {
   width: 95%;
-  margin: 3.5em auto 3em;
+  margin: 3.5em auto 1em;
   text-shadow: 1px 1px 1px white;
 }
 body #container .post-wrap .entry .entry-header {
   margin-bottom: 1em;
   overflow: hidden;
-  border-bottom: 1px solid #aaaaaa;
+  border-bottom: 1px solid #555555;
 }
 body #container .post-wrap .entry .entry-header .entry-title {
   font-size: 2em;
@@ -188,7 +216,7 @@ body #container .post-wrap .entry .entry-header .entry-title a {
   color: #333333;
 }
 body #container .post-wrap .entry .entry-header .entry-title a:hover {
-  color: #ae956b;
+  color: #954141;
 }
 body #container .post-wrap .entry .entry-header .entry-meta {
   font-size: .85em;
@@ -199,10 +227,10 @@ body #container .post-wrap .entry .entry-header .entry-meta a {
   color: #333333;
 }
 body #container .post-wrap .entry .entry-header .entry-meta a:hover {
-  color: #ae956b;
+  color: #954141;
 }
-body #container .post-wrap .entry .entry-header .entry-meta .entry-date {
-  margin-right: 1em;
+body #container .post-wrap .entry .entry-header .entry-meta .permalink, body #container .post-wrap .entry .entry-header .entry-meta .entry-date, body #container .post-wrap .entry .entry-header .entry-meta .entry-author {
+  display: block;
 }
 body #container .post-wrap .entry .entry-header .share {
   float: right;
@@ -217,7 +245,7 @@ body #container .post-wrap .entry .entry-content img {
 }
 body #container .post-wrap .entry .entry-footer {
   overflow: hidden;
-  border-top: 1px solid #aaaaaa;
+  border-top: 1px solid #555555;
   padding-top: 1em;
   margin-bottom: 1em;
 }
@@ -225,40 +253,40 @@ body #container .post-wrap .entry .entry-footer .share {
   text-align: right;
 }
 body #container #footer {
-  border-top: 1px solid #aaaaaa;
-  border-bottom: 1px solid #aaaaaa;
-  font-family: "Raleway", Times, "Times New Roman", serif;
+  border-top: 1px solid #555555;
+  border-bottom: 1px solid #555555;
+  font-family: "Gentium Basic", Times, "Times New Roman", serif;
   font-size: .85em;
   padding: 1em 1em;
-  color: #555555;
+  color: #2a2a2a;
   margin-bottom: 2em;
 }
 body #container #footer h4 {
-  font-family: "Raleway", Times, "Times New Roman", serif;
+  font-family: "Gentium Basic", Times, "Times New Roman", serif;
 }
 body #container #footer a {
-  color: #555555;
+  color: #2a2a2a;
 }
 body #container #footer a:hover {
-  color: #ae956b;
+  color: #954141;
 }
 body #container .sidebar-widgets {
   overflow: hidden;
-  width: 95%;
+  width: 100;
   margin: 0 auto;
-  background: #111111;
+  background: #eeeeee;
   padding: 2em 2em 0;
-  color: #aaaaaa;
-  border-top: 4px solid #ae956b;
-  border-bottom: 4px solid #ae956b;
+  color: #555555;
+  border-top: 4px solid #954141;
+  border-bottom: 4px solid #954141;
   margin-bottom: 2em;
 }
 body #container .sidebar-widgets .widget {
   margin-bottom: 2em;
 }
 body #container .sidebar-widgets .widget h3 {
-  border-bottom: 1px solid #ae956b;
-  color: #ae956b;
+  border-bottom: 1px solid #954141;
+  color: #954141;
   padding-bottom: .25em;
   margin-bottom: 1em;
   font-size: 1.1em;
@@ -275,6 +303,10 @@ body #container .sidebar-widgets .widget .social-icon i:hover {
 }
 
 @media only screen and (min-width: 769px) {
+  body {
+    font-size: 1.3em;
+    line-height: 1.7em;
+  }
   body #header {
     padding-bottom: 1em;
   }
@@ -290,22 +322,27 @@ body #container .sidebar-widgets .widget .social-icon i:hover {
     padding: 0 2.5em;
   }
   body #container .content .scroller .entry {
-    float: left;
-    width: 66%;
-    padding-right: 2em;
     margin-bottom: 0;
   }
-  body #container .content .scroller .sidebar-widgets {
-    float: right;
-    width: 33%;
-    margin-top: 2em;
+  body #container .content .scroller .entry .entry-meta .permalink, body #container .content .scroller .entry .entry-meta .entry-date, body #container .content .scroller .entry .entry-meta .entry-author {
+    margin-right: 1em;
+    float: left;
   }
   body #container .content .scroller .sidebar-widgets .widget {
-    width: 100%;
-    padding-right: 1em;
+    padding-right: 5%;
+    width: 35%;
+    float: left;
+  }
+  body #container .content .scroller .sidebar-widgets .widget:last-child {
+    padding-right: 0;
+    width: 28%;
   }
   body #container .content .scroller #footer {
     padding-left: 0;
+  }
+  body .bb-custom-wrapper nav span,
+  body .menu-button {
+    padding-top: 0;
   }
 
   .js .content {
@@ -328,7 +365,7 @@ Icon Brand Colors
 }
 
 .color-github {
-  color: #aaaaaa;
+  color: #555555;
 }
 
 .color-pinterest {
@@ -348,7 +385,7 @@ Icon Brand Colors
 }
 
 .color-digg {
-  color: #aaaaaa;
+  color: #555555;
 }
 
 .color-stumbleupon {
@@ -380,15 +417,15 @@ Icon Brand Colors
 }
 
 .color-mail {
-  color: #aaaaaa;
+  color: #555555;
 }
 
 .color-mobile {
-  color: #aaaaaa;
+  color: #555555;
 }
 
 .color-location {
-  color: #aaaaaa;
+  color: #555555;
 }
 
 .color-gplus:hover {
@@ -404,7 +441,7 @@ Icon Brand Colors
 }
 
 .color-github:hover {
-  color: #666666;
+  color: #333333;
 }
 
 .color-pinterest:hover {
@@ -428,7 +465,7 @@ Icon Brand Colors
 }
 
 .color-stumbleupon:hover {
-  color: #666666;
+  color: #333333;
 }
 
 .color-linkedin:hover {
@@ -456,15 +493,15 @@ Icon Brand Colors
 }
 
 .color-mail:hover {
-  color: #666666;
+  color: #333333;
 }
 
 .color-mobile:hover {
-  color: #666666;
+  color: #333333;
 }
 
 .color-location:hover {
-  color: #666666;
+  color: #333333;
 }
 
 .js body {
@@ -498,7 +535,7 @@ Icon Brand Colors
   display: none;
 }
 .no-js .container {
-  padding-left: 240px;
+  padding-left: 300px;
 }
 .no-js .content h2 {
   padding: 40px 1% 20px;
@@ -507,26 +544,28 @@ Icon Brand Colors
 .bb-custom-wrapper nav {
   position: absolute;
   z-index: 1000;
+  font-size: 1em;
 }
 
 .bb-custom-wrapper nav span,
 .menu-button {
   position: absolute;
-  width: 1em;
-  height: 1.1em;
-  line-height: 1em;
+  width: 32px;
+  height: 32px;
+  line-height: 1.65em;
   text-align: center;
   speak: none;
   font-weight: bold;
   cursor: pointer;
-  font-size: 2em;
-  color: #ae956b;
-  background: #111111;
+  font-size: 1em;
+  color: #954141;
+  background: #eeeeee;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
+  padding-top: .25em;
 }
 .bb-custom-wrapper nav span:hover,
 .menu-button:hover {
@@ -534,7 +573,8 @@ Icon Brand Colors
   -moz-transition: background 0.3s linear;
   -o-transition: background 0.3s linear;
   transition: background 0.3s linear;
-  color: #aaaaaa;
+  color: #555555;
+  background: #eeeeee;
 }
 .bb-custom-wrapper nav span i:before,
 .menu-button i:before {
@@ -542,53 +582,60 @@ Icon Brand Colors
 }
 
 .menu-button {
-  font-size: 2em;
-  line-height: .75em;
-}
-.menu-button i {
-  font-size: .5em;
+  line-height: 1.8em;
 }
 
+.menu-panel {
+  background: #eeeeee;
+}
 .menu-panel li {
-  border-bottom: 1px solid #221d15;
+  border-bottom: 1px solid #e9d9d9;
 }
 .menu-panel li.menu-toc-current {
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #685940), color-stop(100%, #ae956b));
-  background-image: -webkit-linear-gradient(left, #685940, #ae956b);
-  background-image: -moz-linear-gradient(left, #685940, #ae956b);
-  background-image: -o-linear-gradient(left, #685940, #ae956b);
-  background-image: linear-gradient(left, #685940, #ae956b);
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #954141), color-stop(100%, #954141));
+  background-image: -webkit-linear-gradient(left, #954141, #954141);
+  background-image: -moz-linear-gradient(left, #954141, #954141);
+  background-image: -o-linear-gradient(left, #954141, #954141);
+  background-image: linear-gradient(left, #954141, #954141);
 }
 .menu-panel li.menu-toc-current a {
-  color: #111111;
+  color: #eeeeee;
   -webkit-transition: none 1s;
   -moz-transition: none 1s;
   -o-transition: none 1s;
   transition: none 1s;
 }
 .menu-panel li a {
-  color: #aaaaaa;
+  color: #555555;
 }
 .menu-panel li a:hover {
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #685940), color-stop(100%, #ae956b));
-  background-image: -webkit-linear-gradient(left, #685940, #ae956b);
-  background-image: -moz-linear-gradient(left, #685940, #ae956b);
-  background-image: -o-linear-gradient(left, #685940, #ae956b);
-  background-image: linear-gradient(left, #685940, #ae956b);
-  color: #111111;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #954141), color-stop(100%, #954141));
+  background-image: -webkit-linear-gradient(left, #954141, #954141);
+  background-image: -moz-linear-gradient(left, #954141, #954141);
+  background-image: -o-linear-gradient(left, #954141, #954141);
+  background-image: linear-gradient(left, #954141, #954141);
+  color: #eeeeee;
   -webkit-transition: none 1s;
   -moz-transition: none 1s;
   -o-transition: none 1s;
   transition: none 1s;
 }
+.menu-panel li a h4 {
+  margin-bottom: .5em;
+  font-size: .8em;
+}
+.menu-panel li a p {
+  font-size: .6em;
+  line-height: 1.5em;
+}
 
 .content {
   padding-bottom: 5em;
-  border-top: 5px solid #ae956b;
+  border-top: 5px solid #954141;
 }
 
 .slideRight {
-  left: 240px;
+  left: 300px;
 }
 
 .scroller {
@@ -603,9 +650,19 @@ Icon Brand Colors
 }
 
 .bb-item, .bb-bookblock, .bb-content {
-  background: #111111;
+  background: #eeeeee;
 }
 
+.menu-panel {
+  outline: none;
+}
+.menu-panel .jspVerticalBar {
+  display: none;
+}
+
+.jspVerticalBar {
+  width: 5px;
+}
 .jspVerticalBar .jspCap {
   height: 0;
 }
@@ -616,8 +673,10 @@ Icon Brand Colors
 }
 
 .jspDrag {
-  background: #333333;
+  background: #954141;
   border-radius: 0;
+  border: none;
+  width: 5px;
 }
 
 @media screen and (max-width: 800px) {

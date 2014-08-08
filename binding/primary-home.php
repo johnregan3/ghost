@@ -6,6 +6,7 @@
 
 <div class="bb-custom-wrapper">
 		<div id="bb-bookblock" class="bb-bookblock">
+			<?php include( 'post-home.php' ) ?>
 			<?php include( 'post-home1.php' ) ?>
 			<?php include( 'post-home2.php' ) ?>
 			<?php include( 'post-home3.php' ) ?>

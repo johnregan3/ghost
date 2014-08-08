@@ -51,16 +51,16 @@ a:hover {
 }
 
 .slideRight {
-	left: 240px;
+	left: 300px;
 }
 
 .no-js .container {
-	padding-left: 240px;
+	padding-left: 300px;
 }
 
 .menu-panel {
-	background: #000;
-	width: 240px;
+	background: #111;
+	width: 300px;
 	height: 100%;
 	position: fixed;
 	z-index: 1000;
@@ -71,7 +71,7 @@ a:hover {
 
 .js .menu-panel {
 	position: absolute;
-	left: -240px;
+	left: -300px;
 }
 
 .menu-panel h3 {
@@ -101,32 +101,10 @@ a:hover {
 	/* background: #dd1338; */
 }
 
-.menu-panel div {
-	margin-top: 20px;
-}
-
-.menu-panel div a {
-	text-transform: uppercase;
-	font-size: 0.7em;
-	line-height: 1;
-	padding: 5px 20px;
-	display: block;
-	border: none;
-	color: #bc0b0b;
-	letter-spacing: 1px;
-	font-weight: 800;
-	text-shadow: 0 1px rgba(255,255,255,0.2);
-}
-
-.menu-panel div a:hover {
-	background: inherit;
-	color: #fff;
-	text-shadow: none;
-}
 
 .bb-custom-wrapper nav {
-	top: 1em;
-	left: 6em;
+	top: .5em;
+	left: 3.5em;
 	position: absolute;
 	z-index: 1000;
 }
@@ -136,7 +114,7 @@ a:hover {
 	position: absolute;
 	width: 32px;
 	height: 32px;
-	top: 0;
+	top: .5em;
 	left: 0;
 	border-radius: 50%;
 	color: #fff;
@@ -146,19 +124,14 @@ a:hover {
 	cursor: pointer;
 }
 
-.bb-custom-wrapper nav span:hover,
-.menu-button:hover {
-	background: #000;
-}
-
 .bb-custom-wrapper nav span:last-child {
-	left: 1.5em;
+	left: 2.5em;
 }
 
 .menu-button {
 	z-index: 1000;
-	left: 1.5em;
-	top: .5em;
+	left: 1em;
+	top: 1em;
 }
 
 .no-js .bb-custom-wrapper nav span,

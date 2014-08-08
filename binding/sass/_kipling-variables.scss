@@ -14,6 +14,10 @@ $default-text-shadow-color: #fff;
 $default-text-shadow-v-offset: 1px;
 $default-text-shadow-h-offset: 1px;
 
+$shade80: shade($primary-color, 80%);
+$shade50: shade( $text-color-inverse, 50% );
+$tab-gradient: shade($primary-color, 40%);
+
 
 $border-color: #555;
 $primary-bg-color: #111;

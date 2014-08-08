@@ -10,10 +10,10 @@ body {
 	webkit-font-smoothing: antialiased;
 	font-family: $primary-font;
 	font-size: 16px;
-	line-height: 1.5em;
 	color: $text-color;
 	background: $background;
 	height: 100%;
+	line-height: 1.5em;
 
 	a {
 		color: $primary-color;
@@ -40,12 +40,31 @@ body {
 		font-family: $secondary-font;
 		letter-spacing: -1px;
 		line-height: 1.5em;
-		margin-bottom: 0;
+		margin-bottom: .5em;
 	}
 
 	h4, h5, h6 {
 		letter-spacing: 0;
 		margin: 0;
+	}
+
+	h1 {
+		font-size:1.75em;
+	}
+	h2 {
+		font-size:1.5em;
+	}
+	h3 {
+		font-size:1.3em;
+	}
+	h4 {
+		font-size:1em;
+	}
+	h5 {
+		font-size:.9em;
+	}
+	h6 {
+		font-size:.75em;
 	}
 
 	p {
@@ -68,15 +87,18 @@ body {
 			text-align: center;
 			font-size: 1.5em;
 			text-transform: uppercase;
+			margin-bottom: 0;
 		}
 
 		h3 {
 			text-align: center;
-			color: shade( $text-color-inverse, 50% );
+			color: $shade50;
 			font-family: $primary-font;
 			font-style: italic;
 			letter-spacing: 0;
 			margin-top: .5em;
+			font-size: 1em;
+			margin-bottom: 0;
 		}
 	}
 
@@ -90,19 +112,31 @@ body {
 
 		.content {
 			background: $background;
-			ul {
-				list-style: none;
+			ul, ol {
+				list-style: decimal;
 				padding-left: 1em;
-				text-indent: -1.5em;
 				margin-right: .5em;
+				margin-left: .25em;
 
 				li {
 					margin-bottom: .5em;
 
 					&:before {
+					}
+				}
+			}
+
+			ul {
+				list-style: none;
+				text-indent: -1.5em;
+				margin-left: .5em;
+				li {
+
+					&:before {
 						content: '\e815';
 						font-family: 'icons-binding';
 						margin-right: .75em;
+						color: $text-color;
 					}
 				}
 			}
@@ -119,7 +153,7 @@ body {
 
 			.entry {
 				width: 95%;
-				margin: 3.5em auto 3em;
+				margin: 3.5em auto 1em;
 				@include single-text-shadow;
 
 				.entry-header {
@@ -156,8 +190,8 @@ body {
 								color: $primary-color;
 							}
 						}
-						.entry-date {
-							margin-right: 1em;
+						.permalink, .entry-date, .entry-author {
+							display: block;
 						}
 					}
 					.share {
@@ -212,7 +246,7 @@ body {
 
 		.sidebar-widgets {
 			overflow: hidden;
-			width: 95%;
+			width: 100;
 			margin: 0 auto;
 			background: $primary-bg-color;
 			padding: 2em 2em 0;

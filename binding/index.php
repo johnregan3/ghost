@@ -24,7 +24,7 @@
 		$(function() {
 			Page.init();
 			$(document).ready(function() {
-				$("#bb-nav-next").fadeOut(300).fadeIn(500).fadeOut(300).fadeIn(700);
+				$('.menu-panel').jScrollPane();
 			});
 		});
 	</script>

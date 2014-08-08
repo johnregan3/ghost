@@ -15,7 +15,8 @@
 								<h2 class="entry-title"><a href="/ghost/binding/single.php">August and Everything After</a></h2>
 								<div class="entry-meta">
 									<a href="#" class="entry-date"><i class="icon-calendar-empty"></i> 14 July 2014</a>
-									<span class="entry-author"><i class="icon-user"></i> John Regan</span>
+									<a href="#" class="entry-author"><i class="icon-user"></i> John Regan</a>
+									<a href="#" class="permalink"><i class="icon-link"></i> Link to this post</a>
 								</div>
 								<?php include( 'share.php' ) ?>
 							</header>

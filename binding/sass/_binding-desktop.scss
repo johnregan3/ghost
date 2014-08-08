@@ -1,6 +1,9 @@
 @media only screen and (min-width: 769px) {
 
 body {
+	font-size: 1.3em;
+	line-height: 1.7em;
+
 		#header {
 			padding-bottom: 1em;
 			h1 {
@@ -21,20 +24,27 @@ body {
 					padding: 0 2.5em;
 
 					.entry {
-						float: left;
-						width: 66%;
-						padding-right: 2em;
 						margin-bottom: 0;
+
+						.entry-meta {
+							.permalink, .entry-date, .entry-author {
+								margin-right: 1em;
+								float: left;
+							}
+						}
 					}
 
 					.sidebar-widgets {
-						float: right;
-						width: 33%;
-						margin-top: 2em;
 
 						.widget {
-							width: 100%;
-							padding-right: 1em;
+							padding-right: 5%;
+							width: 35%;
+							float: left;
+
+							&:last-child {
+								padding-right: 0;
+								width: 28%;
+							}
 						}
 					}
 
@@ -43,6 +53,10 @@ body {
 					}
 				}
 			}
+		}
+		.bb-custom-wrapper nav span,
+		.menu-button {
+			padding-top: 0;
 		}
 	}
 
